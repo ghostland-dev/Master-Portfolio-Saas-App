@@ -1,0 +1,410 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 170 100% 35%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 170 100% 35%;
+    --radius: 0.5rem;
+
+    /* Composants spécifiques */
+    --scroll-thumb: 215 20.2% 65.1%;
+    --scroll-track: 210 40% 96.1%;
+    --dashboard-bg: 0 0% 100%;
+    --card-hover: 210 40% 98%;
+    --tooltip: 222.2 84% 4.9%;
+    --tooltip-foreground: 210 40% 98%;
+    --switch-thumb: 0 0% 100%;
+    --switch-track: 0 0% 90%;
+    --switch-track-active: 170 100% 35%;
+    --theme-transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, fill 0.3s ease, stroke 0.3s
+      ease;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 170 70% 45%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 170 70% 45%;
+
+    /* Composants spécifiques */
+    --scroll-thumb: 217.2 32.6% 25%;
+    --scroll-track: 222.2 84% 7%;
+    --dashboard-bg: 222.2 84% 4.9%;
+    --card-hover: 217.2 32.6% 20%;
+    --tooltip: 210 40% 98%;
+    --tooltip-foreground: 222.2 84% 4.9%;
+    --switch-thumb: 0 0% 100%;
+    --switch-track: 217.2 32.6% 17.5%;
+    --switch-track-active: 170 70% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    transition: var(--theme-transition);
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Styles pour les barres de défilement */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--scroll-thumb)) hsl(var(--scroll-track));
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  \
+}
+hsl(var(--scroll-track
+)
+)
+;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: hsl(var(--scroll-track));
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--scroll-thumb));
+  border-radius: 4px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.5s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.5s ease-out forwards;
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Styles pour les cartes */
+.card-hover-effect {
+  transition: all 0.3s ease;
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  background-color: hsl(var(--card-hover));
+}
+
+/* Styles pour le dashboard */
+.dashboard-layout {
+  background-color: hsl(var(--dashboard-bg));
+}
+
+/* Styles pour les sections de la page d'accueil */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at top right, hsl(var(--primary) / 0.15), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.cta-section {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.1), hsl(var(--background)));
+  border-radius: 1rem;
+}
+
+.cta-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.2), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Styles pour les tooltips */
+.custom-tooltip {
+  background-color: hsl(var(--tooltip));
+  color: hsl(var(--tooltip-foreground));
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  max-width: 20rem;
+  z-index: 50;
+}
+
+/* Styles pour les badges */
+.badge-gradient {
+  background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--primary) / 0.8));
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
+  color: hsl(var(--primary-foreground));
+  font-weight: 500;
+}
+
+/* Styles pour les images */
+.image-filter {
+  filter: saturate(1.1) contrast(1.05);
+}
+
+.dark .image-filter {
+  filter: brightness(0.9) saturate(1.1) contrast(1.1);
+}
+
+/* Styles pour les switch */
+.theme-switch {
+  position: relative;
+  width: 3rem;
+  height: 1.5rem;
+  border-radius: 1.5rem;
+  background-color: hsl(var(--switch-track));
+  transition: background-color 0.3s ease;
+}
+
+.theme-switch[data-state="checked"] {
+  background-color: hsl(var(--switch-track-active));
+}
+
+.theme-switch-thumb {
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: hsl(var(--switch-thumb));
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.theme-switch[data-state="checked"] .theme-switch-thumb {
+  transform: translateX(1.5rem);
+}
+
+/* Styles d'accessibilité */
+/* Mode dyslexie */
+.dyslexia-friendly {
+  font-family: "OpenDyslexic", sans-serif;
+  letter-spacing: 0.05em;
+  word-spacing: 0.1em;
+}
+
+.dyslexia-friendly p,
+.dyslexia-friendly li,
+.dyslexia-friendly label,
+.dyslexia-friendly input,
+.dyslexia-friendly textarea {
+  line-height: 1.6;
+}
+
+/* Taille de police */
+.font-size-large {
+  font-size: 1.2rem;
+}
+
+.font-size-x-large {
+  font-size: 1.4rem;
+}
+
+/* Espacement des lignes */
+.line-spacing-increased {
+  line-height: 1.8;
+}
+
+.line-spacing-double {
+  line-height: 2.2;
+}
+
+/* Contraste élevé */
+.high-contrast {
+  --foreground: 0 0% 0%;
+  --background: 0 0% 100%;
+  --primary: 210 100% 30%;
+  --primary-foreground: 0 0% 100%;
+  --muted-foreground: 0 0% 20%;
+  --border: 0 0% 0%;
+}
+
+.dark .high-contrast {
+  --foreground: 0 0% 100%;
+  --background: 0 0% 0%;
+  --primary: 210 100% 60%;
+  --primary-foreground: 0 0% 0%;
+  --muted-foreground: 0 0% 80%;
+  --border: 0 0% 100%;
+}
+
+/* Modes daltonisme */
+.color-blind-protanopia {
+  filter: url("#protanopia-filter");
+}
+
+.color-blind-deuteranopia {
+  filter: url("#deuteranopia-filter");
+}
+
+.color-blind-tritanopia {
+  filter: url("#tritanopia-filter");
+}
+
+/* Réduction des animations */
+.reduced-motion * {
+  animation-duration: 0.001ms !important;
+  transition-duration: 0.001ms !important;
+}
+
