@@ -35,8 +35,7 @@
     --switch-thumb: 0 0% 100%;
     --switch-track: 0 0% 90%;
     --switch-track-active: 170 100% 35%;
-    --theme-transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, fill 0.3s ease, stroke 0.3s
-      ease;
+    --theme-transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, fill 0.3s ease, stroke 0.3s ease;
   }
 
   .dark {
@@ -92,17 +91,6 @@
 *::-webkit-scrollbar {
   width: 8px;
   height: 8px;
-  \
-}
-hsl(var(--scroll-track
-)
-)
-;
-}
-
-*::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
 }
 
 *::-webkit-scrollbar-track {
@@ -114,6 +102,7 @@ hsl(var(--scroll-track
   background-color: hsl(var(--scroll-thumb));
   border-radius: 4px;
 }
+
 
 /* Animations */
 @keyframes fadeIn {

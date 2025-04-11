@@ -16,7 +16,7 @@ import { useToast } from "@/components/ui/use-toast"
 export default function AppointmentPage() {
   const { toast } = useToast()
   // Ajouter les types pour les états
-  const [date, setDate] = useState<Date | undefined>(null)
+  const [date, setDate] = useState<Date | undefined>(undefined)
   const [timeSlot, setTimeSlot] = useState<string>("")
   const [formData, setFormData] = useState({
     name: "",
@@ -34,7 +34,7 @@ export default function AppointmentPage() {
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault()
 
     if (!date || !timeSlot) {
@@ -56,7 +56,7 @@ export default function AppointmentPage() {
       description: `Votre demande de rendez-vous pour le ${date.toLocaleDateString()} à ${timeSlot} a été envoyée.`,
     })
 
-    setDate(null)
+    setDate(undefined)
     setTimeSlot("")
     setFormData({
       name: "",

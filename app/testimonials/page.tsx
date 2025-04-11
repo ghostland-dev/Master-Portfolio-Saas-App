@@ -24,11 +24,11 @@ export default function TestimonialsPage() {
                 <AvatarFallback>SM</AvatarFallback>
               </Avatar>
               <div className="flex text-amber-400">
-                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden="true" />
-                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden="true" />
-                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden="true" />
-                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden="true" />
-                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden="true" />
+                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden={true} />
+                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden={true} />
+                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden={true} />
+                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden={true} />
+                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden={true} />
               </div>
             </div>
             <CardTitle className="mt-4">Sophie Martin</CardTitle>
@@ -55,11 +55,11 @@ export default function TestimonialsPage() {
                 <AvatarFallback>TD</AvatarFallback>
               </Avatar>
               <div className="flex text-amber-400">
-                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden="true" />
-                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden="true" />
-                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden="true" />
-                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden="true" />
-                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden="true" />
+                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden={true} />
+                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden={true} />
+                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden={true} />
+                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden={true} />
+                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden={true} />
               </div>
             </div>
             <CardTitle className="mt-4">Thomas Dubois</CardTitle>
@@ -87,11 +87,11 @@ export default function TestimonialsPage() {
                 <AvatarFallback>ER</AvatarFallback>
               </Avatar>
               <div className="flex text-amber-400">
-                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden="true" />
-                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden="true" />
-                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden="true" />
-                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden="true" />
-                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden="true" />
+                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden={true} />
+                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden={true} />
+                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden={true} />
+                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden={true} />
+                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden={true} />
               </div>
             </div>
             <CardTitle className="mt-4">Émilie Rousseau</CardTitle>
@@ -118,11 +118,11 @@ export default function TestimonialsPage() {
                 <AvatarFallback>AM</AvatarFallback>
               </Avatar>
               <div className="flex text-amber-400">
-                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden="true" />
-                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden="true" />
-                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden="true" />
-                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden="true" />
-                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden="true" />
+                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden={true} />
+                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden={true} />
+                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden={true} />
+                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden={true} />
+                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden={true} />
               </div>
             </div>
             <CardTitle className="mt-4">Alexandre Moreau</CardTitle>
@@ -151,11 +151,11 @@ export default function TestimonialsPage() {
                 <AvatarFallback>JL</AvatarFallback>
               </Avatar>
               <div className="flex text-amber-400">
-                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden="true" />
-                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden="true" />
-                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden="true" />
-                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden="true" />
-                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden="true" />
+                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden={true} />
+                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden={true} />
+                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden={true} />
+                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden={true} />
+                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden={true} />
               </div>
             </div>
             <CardTitle className="mt-4">Julie Lefevre</CardTitle>
@@ -183,11 +183,11 @@ export default function TestimonialsPage() {
                 <AvatarFallback>NB</AvatarFallback>
               </Avatar>
               <div className="flex text-amber-400">
-                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden="true" />
-                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden="true" />
-                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden="true" />
-                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden="true" />
-                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden="true" />
+                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden={true} />
+                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden={true} />
+                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden={true} />
+                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden={true} />
+                <Icon name="Star" className="h-5 w-5 fill-current" aria-hidden={true} />
               </div>
             </div>
             <CardTitle className="mt-4">Nicolas Bernard</CardTitle>

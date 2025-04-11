@@ -227,12 +227,12 @@ export default function ContactPage() {
                   <Button type="submit" className="w-full" disabled={isSubmitting}>
                     {isSubmitting ? (
                       <>
-                        <Icon name="Loader2" className="mr-2 h-4 w-4 animate-spin" aria-hidden="true" />
+                        <Icon name="Loader2" className="mr-2 h-4 w-4 animate-spin" aria-hidden={true} />
                         Envoi en cours...
                       </>
                     ) : (
                       <>
-                        <Icon name="Send" className="mr-2 h-4 w-4" aria-hidden="true" />
+                        <Icon name="Send" className="mr-2 h-4 w-4" aria-hidden={true} />
                         Envoyer le message
                       </>
                     )}
@@ -252,7 +252,7 @@ export default function ContactPage() {
             <CardContent className="space-y-4">
               <div className="flex items-start gap-3">
                 <div className="bg-primary/10 p-2 rounded-full">
-                  <Icon name="Mail" className="h-5 w-5 text-primary" aria-hidden="true" />
+                  <Icon name="Mail" className="h-5 w-5 text-primary" aria-hidden={true} />
                 </div>
                 <div>
                   <h3 className="font-medium">Email</h3>
@@ -262,7 +262,7 @@ export default function ContactPage() {
 
               <div className="flex items-start gap-3">
                 <div className="bg-primary/10 p-2 rounded-full">
-                  <Icon name="Phone" className="h-5 w-5 text-primary" aria-hidden="true" />
+                  <Icon name="Phone" className="h-5 w-5 text-primary" aria-hidden={true} />
                 </div>
                 <div>
                   <h3 className="font-medium">Téléphone</h3>
@@ -272,7 +272,7 @@ export default function ContactPage() {
 
               <div className="flex items-start gap-3">
                 <div className="bg-primary/10 p-2 rounded-full">
-                  <Icon name="MapPin" className="h-5 w-5 text-primary" aria-hidden="true" />
+                  <Icon name="MapPin" className="h-5 w-5 text-primary" aria-hidden={true} />
                 </div>
                 <div>
                   <h3 className="font-medium">Localisation</h3>
@@ -282,7 +282,7 @@ export default function ContactPage() {
 
               <div className="flex items-start gap-3">
                 <div className="bg-primary/10 p-2 rounded-full">
-                  <Icon name="Clock" className="h-5 w-5 text-primary" aria-hidden="true" />
+                  <Icon name="Clock" className="h-5 w-5 text-primary" aria-hidden={true} />
                 </div>
                 <div>
                   <h3 className="font-medium">Disponibilité</h3>
@@ -301,19 +301,19 @@ export default function ContactPage() {
               <div className="flex flex-wrap gap-3">
                 <Button variant="outline" size="lg" asChild className="flex-1">
                   <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
-                    <Icon name="Github" className="mr-2 h-4 w-4" aria-hidden="true" />
+                    <Icon name="Github" className="mr-2 h-4 w-4" aria-hidden={true} />
                     GitHub
                   </Link>
                 </Button>
                 <Button variant="outline" size="lg" asChild className="flex-1">
                   <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                    <Icon name="Linkedin" className="mr-2 h-4 w-4" aria-hidden="true" />
+                    <Icon name="Linkedin" className="mr-2 h-4 w-4" aria-hidden={true} />
                     LinkedIn
                   </Link>
                 </Button>
                 <Button variant="outline" size="lg" asChild className="flex-1">
                   <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                    <Icon name="Twitter" className="mr-2 h-4 w-4" aria-hidden="true" />
+                    <Icon name="Twitter" className="mr-2 h-4 w-4" aria-hidden={true} />
                     Twitter
                   </Link>
                 </Button>
@@ -389,7 +389,7 @@ export default function ContactPage() {
         <div className="text-center mt-8">
           <Button asChild>
             <Link href="/faq">
-              Voir toutes les FAQ <Icon name="ArrowRight" className="ml-2 h-4 w-4" aria-hidden="true" />
+              Voir toutes les FAQ <Icon name="ArrowRight" className="ml-2 h-4 w-4" aria-hidden={true} />
             </Link>
           </Button>
         </div>

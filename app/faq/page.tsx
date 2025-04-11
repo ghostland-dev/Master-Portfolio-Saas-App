@@ -262,7 +262,7 @@ export default function FAQPage() {
               </ol>
               <div className="mt-4 flex justify-end">
                 <Link href="/contact" className="text-primary hover:underline flex items-center">
-                  Contactez-moi <Icon name="ArrowRight" className="ml-1 h-4 w-4" aria-hidden="true" />
+                  Contactez-moi <Icon name="ArrowRight" className="ml-1 h-4 w-4" aria-hidden={true} />
                 </Link>
               </div>
             </CardContent>
@@ -280,14 +280,14 @@ export default function FAQPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/contact" className="text-primary hover:underline flex items-center">
-                  Formulaire de contact <Icon name="ArrowRight" className="ml-1 h-4 w-4" aria-hidden="true" />
+                  Formulaire de contact <Icon name="ArrowRight" className="ml-1 h-4 w-4" aria-hidden={true} />
                 </Link>
                 <span className="text-muted-foreground hidden sm:inline">ou</span>
                 <Link
                   href="mailto:contact@ismailmouyahada.com"
                   className="text-primary hover:underline flex items-center"
                 >
-                  contact@ismailmouyahada.com <Icon name="ArrowRight" className="ml-1 h-4 w-4" aria-hidden="true" />
+                  contact@ismailmouyahada.com <Icon name="ArrowRight" className="ml-1 h-4 w-4" aria-hidden={true} />
                 </Link>
               </div>
             </CardContent>

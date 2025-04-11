@@ -120,10 +120,10 @@ export default function LoginPage() {
         <Tabs defaultValue="login" value={activeTab} onValueChange={setActiveTab} className="w-full">
           <TabsList className="grid w-full grid-cols-2">
             <TabsTrigger value="login" className="flex items-center gap-1.5">
-              <Icon name="LogIn" size="sm" aria-hidden="true" /> Connexion
+              <Icon name="LogIn" size="sm" aria-hidden={true} /> Connexion
             </TabsTrigger>
             <TabsTrigger value="demo" className="flex items-center gap-1.5">
-              <Icon name="Users" size="sm" aria-hidden="true" /> Comptes de démo
+              <Icon name="Users" size="sm" aria-hidden={true} /> Comptes de démo
             </TabsTrigger>
           </TabsList>
 
@@ -172,12 +172,12 @@ export default function LoginPage() {
                   <Button type="submit" className="w-full" disabled={loading}>
                     {loading ? (
                       <>
-                        <Icon name="Loader2" className="mr-2 h-4 w-4 animate-spin" aria-hidden="true" />
+                        <Icon name="Loader2" className="mr-2 h-4 w-4 animate-spin" aria-hidden={true} />
                         Connexion en cours...
                       </>
                     ) : (
                       <>
-                        <Icon name="LogIn" className="mr-2 h-4 w-4" aria-hidden="true" />
+                        <Icon name="LogIn" className="mr-2 h-4 w-4" aria-hidden={true} />
                         Se connecter
                       </>
                     )}
@@ -198,7 +198,7 @@ export default function LoginPage() {
                   <div className="border rounded-lg p-4 hover:bg-accent/50 transition-colors">
                     <div className="flex items-center gap-3 mb-2">
                       <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
-                        <Icon name="UserCog" className="h-5 w-5 text-primary" aria-hidden="true" />
+                        <Icon name="UserCog" className="h-5 w-5 text-primary" aria-hidden={true} />
                       </div>
                       <div>
                         <h3 className="font-semibold">Compte Administrateur</h3>
@@ -223,7 +223,7 @@ export default function LoginPage() {
                         setActiveTab("login")
                       }}
                     >
-                      <Icon name="Copy" className="mr-2 h-4 w-4" aria-hidden="true" />
+                      <Icon name="Copy" className="mr-2 h-4 w-4" aria-hidden={true} />
                       Utiliser ces identifiants
                     </Button>
                   </div>
@@ -231,7 +231,7 @@ export default function LoginPage() {
                   <div className="border rounded-lg p-4 hover:bg-accent/50 transition-colors">
                     <div className="flex items-center gap-3 mb-2">
                       <div className="h-10 w-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
-                        <Icon name="User" className="h-5 w-5 text-blue-600 dark:text-blue-400" aria-hidden="true" />
+                        <Icon name="User" className="h-5 w-5 text-blue-600 dark:text-blue-400" aria-hidden={true} />
                       </div>
                       <div>
                         <h3 className="font-semibold">Compte Client</h3>
@@ -256,7 +256,7 @@ export default function LoginPage() {
                         setActiveTab("login")
                       }}
                     >
-                      <Icon name="Copy" className="mr-2 h-4 w-4" aria-hidden="true" />
+                      <Icon name="Copy" className="mr-2 h-4 w-4" aria-hidden={true} />
                       Utiliser ces identifiants
                     </Button>
                   </div>
@@ -273,7 +273,7 @@ export default function LoginPage() {
 
         <div className="mt-4 text-center text-sm text-muted-foreground">
           <Link href="/" className="hover:text-primary hover:underline">
-            <Icon name="ArrowLeft" className="mr-1 h-3 w-3 inline" aria-hidden="true" />
+            <Icon name="ArrowLeft" className="mr-1 h-3 w-3 inline" aria-hidden={true} />
             Retour à l'accueil
           </Link>
         </div>

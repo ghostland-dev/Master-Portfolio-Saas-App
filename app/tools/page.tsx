@@ -41,7 +41,7 @@ export default function ToolsPage() {
           <CardFooter>
             <Button asChild className="w-full">
               <Link href="/tools/project-planner">
-                <Icon name="Calendar" className="mr-2 h-4 w-4" aria-hidden="true" />
+                <Icon name="Calendar" className="mr-2 h-4 w-4" aria-hidden={true} />
                 Accéder à l'outil
               </Link>
             </Button>
@@ -72,7 +72,7 @@ export default function ToolsPage() {
           <CardFooter>
             <Button asChild className="w-full">
               <Link href="/tools/budget-simulator">
-                <Icon name="Calculator" className="mr-2 h-4 w-4" aria-hidden="true" />
+                <Icon name="Calculator" className="mr-2 h-4 w-4" aria-hidden={true} />
                 Accéder à l'outil
               </Link>
             </Button>
@@ -102,7 +102,7 @@ export default function ToolsPage() {
           <CardFooter>
             <Button asChild className="w-full">
               <Link href="/tools/technology-selector">
-                <Icon name="Layers" className="mr-2 h-4 w-4" aria-hidden="true" />
+                <Icon name="Layers" className="mr-2 h-4 w-4" aria-hidden={true} />
                 Accéder à l'outil
               </Link>
             </Button>
@@ -133,7 +133,7 @@ export default function ToolsPage() {
           <CardFooter>
             <Button asChild className="w-full">
               <Link href="/tools/devops-checklist">
-                <Icon name="CheckSquare" className="mr-2 h-4 w-4" aria-hidden="true" />
+                <Icon name="CheckSquare" className="mr-2 h-4 w-4" aria-hidden={true} />
                 Accéder à l'outil
               </Link>
             </Button>
@@ -164,7 +164,7 @@ export default function ToolsPage() {
           <CardFooter>
             <Button asChild className="w-full">
               <Link href="/tools/performance-calculator">
-                <Icon name="Zap" className="mr-2 h-4 w-4" aria-hidden="true" />
+                <Icon name="Zap" className="mr-2 h-4 w-4" aria-hidden={true} />
                 Accéder à l'outil
               </Link>
             </Button>
@@ -195,7 +195,7 @@ export default function ToolsPage() {
           <CardFooter>
             <Button asChild className="w-full">
               <Link href="/tools/code-generator">
-                <Icon name="Code" className="mr-2 h-4 w-4" aria-hidden="true" />
+                <Icon name="Code" className="mr-2 h-4 w-4" aria-hidden={true} />
                 Accéder à l'outil
               </Link>
             </Button>
@@ -215,25 +215,25 @@ export default function ToolsPage() {
               <CardContent>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2">
-                    <Icon name="FileText" className="h-5 w-5 text-primary" aria-hidden="true" />
+                    <Icon name="FileText" className="h-5 w-5 text-primary" aria-hidden={true} />
                     <Link href="/blog/introduction-to-devops" className="hover:text-primary transition-colors">
                       Introduction au DevOps
                     </Link>
                   </li>
                   <li className="flex items-center gap-2">
-                    <Icon name="FileText" className="h-5 w-5 text-primary" aria-hidden="true" />
+                    <Icon name="FileText" className="h-5 w-5 text-primary" aria-hidden={true} />
                     <Link href="/blog/react-best-practices" className="hover:text-primary transition-colors">
                       Bonnes pratiques React
                     </Link>
                   </li>
                   <li className="flex items-center gap-2">
-                    <Icon name="FileText" className="h-5 w-5 text-primary" aria-hidden="true" />
+                    <Icon name="FileText" className="h-5 w-5 text-primary" aria-hidden={true} />
                     <Link href="/blog/docker-for-beginners" className="hover:text-primary transition-colors">
                       Docker pour les débutants
                     </Link>
                   </li>
                   <li className="flex items-center gap-2">
-                    <Icon name="FileText" className="h-5 w-5 text-primary" aria-hidden="true" />
+                    <Icon name="FileText" className="h-5 w-5 text-primary" aria-hidden={true} />
                     <Link href="/blog/ci-cd-pipeline" className="hover:text-primary transition-colors">
                       Créer un pipeline CI/CD
                     </Link>
@@ -255,25 +255,25 @@ export default function ToolsPage() {
               <CardContent>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2">
-                    <Icon name="Download" className="h-5 w-5 text-primary" aria-hidden="true" />
+                    <Icon name="Download" className="h-5 w-5 text-primary" aria-hidden={true} />
                     <Link href="/resources/react-starter-template" className="hover:text-primary transition-colors">
                       Template React avec TypeScript
                     </Link>
                   </li>
                   <li className="flex items-center gap-2">
-                    <Icon name="Download" className="h-5 w-5 text-primary" aria-hidden="true" />
+                    <Icon name="Download" className="h-5 w-5 text-primary" aria-hidden={true} />
                     <Link href="/resources/nextjs-blog-template" className="hover:text-primary transition-colors">
                       Blog Next.js avec MDX
                     </Link>
                   </li>
                   <li className="flex items-center gap-2">
-                    <Icon name="Download" className="h-5 w-5 text-primary" aria-hidden="true" />
+                    <Icon name="Download" className="h-5 w-5 text-primary" aria-hidden={true} />
                     <Link href="/resources/docker-compose-templates" className="hover:text-primary transition-colors">
                       Configurations Docker Compose
                     </Link>
                   </li>
                   <li className="flex items-center gap-2">
-                    <Icon name="Download" className="h-5 w-5 text-primary" aria-hidden="true" />
+                    <Icon name="Download" className="h-5 w-5 text-primary" aria-hidden={true} />
                     <Link href="/resources/github-actions-workflows" className="hover:text-primary transition-colors">
                       Workflows GitHub Actions
                     </Link>
@@ -300,12 +300,12 @@ export default function ToolsPage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" className="animate-pulse-slow">
                   <Link href="/contact">
-                    <Icon name="Mail" size="sm" className="mr-2" aria-hidden="true" /> Discuter de votre projet
+                    <Icon name="Mail" size="sm" className="mr-2" aria-hidden={true} /> Discuter de votre projet
                   </Link>
                 </Button>
                 <Button variant="outline" asChild size="lg">
                   <Link href="/services">
-                    <Icon name="Info" size="sm" className="mr-2" aria-hidden="true" /> En savoir plus
+                    <Icon name="Info" size="sm" className="mr-2" aria-hidden={true} /> En savoir plus
                   </Link>
                 </Button>
               </div>

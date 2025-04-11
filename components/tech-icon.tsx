@@ -27,8 +27,9 @@ export function TechIcon({ name, size = 24, className = "", fallbackIcon }: Tech
 
   return (
     <div className={`relative ${className}`} style={{ width: size, height: size }}>
+   
       <Image
-        src={iconUrl || "/placeholder.svg"}
+        src={`images/tech/${name}.svg`}
         alt={`${name} icon`}
         width={size}
         height={size}

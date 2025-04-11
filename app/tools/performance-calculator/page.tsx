@@ -475,7 +475,7 @@ export default function PerformanceCalculatorPage() {
                 Réinitialiser
               </Button>
               <Button type="button" onClick={calculatePerformance}>
-                <Icon name="Calculator" size="sm" className="mr-2" aria-hidden="true" /> Calculer les performances
+                <Icon name="Calculator" size="sm" className="mr-2" aria-hidden={true} /> Calculer les performances
               </Button>
             </CardFooter>
           </Card>
@@ -486,13 +486,13 @@ export default function PerformanceCalculatorPage() {
                 <div className="flex justify-between items-center">
                   <div>
                     <CardTitle className="flex items-center gap-2">
-                      <Icon name="BarChart" className="text-primary" aria-hidden="true" />
+                      <Icon name="BarChart" className="text-primary" aria-hidden={true} />
                       Estimation des Performances
                     </CardTitle>
                     <CardDescription>Basée sur les paramètres fournis pour votre application</CardDescription>
                   </div>
                   <Button variant="outline" size="sm" onClick={handleGeneratePDF}>
-                    <Icon name="FileText" size="sm" className="mr-2" aria-hidden="true" />
+                    <Icon name="FileText" size="sm" className="mr-2" aria-hidden={true} />
                     Télécharger en PDF
                   </Button>
                 </div>
@@ -501,13 +501,13 @@ export default function PerformanceCalculatorPage() {
                 <Tabs defaultValue="metrics">
                   <TabsList className="mb-4">
                     <TabsTrigger value="metrics" className="flex items-center gap-1.5">
-                      <Icon name="LineChart" size="sm" aria-hidden="true" /> Métriques
+                      <Icon name="LineChart" size="sm" aria-hidden={true} /> Métriques
                     </TabsTrigger>
                     <TabsTrigger value="resources" className="flex items-center gap-1.5">
-                      <Icon name="Cpu" size="sm" aria-hidden="true" /> Ressources
+                      <Icon name="Cpu" size="sm" aria-hidden={true} /> Ressources
                     </TabsTrigger>
                     <TabsTrigger value="recommendations" className="flex items-center gap-1.5">
-                      <Icon name="Lightbulb" size="sm" aria-hidden="true" /> Recommandations
+                      <Icon name="Lightbulb" size="sm" aria-hidden={true} /> Recommandations
                     </TabsTrigger>
                   </TabsList>
                   <TabsContent value="metrics" className="mt-0">
@@ -515,7 +515,7 @@ export default function PerformanceCalculatorPage() {
                       <div className="space-y-4">
                         <div className="space-y-2">
                           <h3 className="font-semibold flex items-center gap-2">
-                            <Icon name="Clock" size="sm" variant="solid" aria-hidden="true" /> Temps de Réponse
+                            <Icon name="Clock" size="sm" variant="solid" aria-hidden={true} /> Temps de Réponse
                           </h3>
                           <div className="p-4 bg-muted rounded-lg">
                             <div className="text-2xl font-bold">
@@ -527,7 +527,7 @@ export default function PerformanceCalculatorPage() {
 
                         <div className="space-y-2">
                           <h3 className="font-semibold flex items-center gap-2">
-                            <Icon name="Activity" size="sm" variant="solid" aria-hidden="true" /> Débit
+                            <Icon name="Activity" size="sm" variant="solid" aria-hidden={true} /> Débit
                           </h3>
                           <div className="p-4 bg-muted rounded-lg">
                             <div className="text-2xl font-bold">
@@ -543,7 +543,7 @@ export default function PerformanceCalculatorPage() {
                       <div className="space-y-4">
                         <div className="space-y-2">
                           <h3 className="font-semibold flex items-center gap-2">
-                            <Icon name="Users" size="sm" variant="solid" aria-hidden="true" /> Utilisateurs Simultanés
+                            <Icon name="Users" size="sm" variant="solid" aria-hidden={true} /> Utilisateurs Simultanés
                           </h3>
                           <div className="p-4 bg-muted rounded-lg">
                             <div className="text-2xl font-bold">
@@ -558,7 +558,7 @@ export default function PerformanceCalculatorPage() {
 
                         <div className="space-y-2">
                           <h3 className="font-semibold flex items-center gap-2">
-                            <Icon name="ArrowUpDown" size="sm" variant="solid" aria-hidden="true" /> Scalabilité
+                            <Icon name="ArrowUpDown" size="sm" variant="solid" aria-hidden={true} /> Scalabilité
                           </h3>
                           <div className="p-4 bg-muted rounded-lg">
                             <div className="text-2xl font-bold">{estimate.scalability.score}/100</div>
@@ -571,7 +571,7 @@ export default function PerformanceCalculatorPage() {
                     {estimate.scalability.bottlenecks.length > 0 && (
                       <div className="mt-6">
                         <h3 className="font-semibold mb-2 flex items-center gap-2">
-                          <Icon name="AlertTriangle" size="sm" className="text-yellow-500" aria-hidden="true" /> Goulots
+                          <Icon name="AlertTriangle" size="sm" className="text-yellow-500" aria-hidden={true} /> Goulots
                           d'Étranglement Potentiels
                         </h3>
                         <ul className="space-y-1 text-muted-foreground">
@@ -581,7 +581,7 @@ export default function PerformanceCalculatorPage() {
                                 name="AlertCircle"
                                 size="sm"
                                 className="text-yellow-500 mt-0.5"
-                                aria-hidden="true"
+                                aria-hidden={true}
                               />
                               <span>{bottleneck}</span>
                             </li>
@@ -598,7 +598,7 @@ export default function PerformanceCalculatorPage() {
                           <div className="space-y-2">
                             <div className="flex justify-between items-center">
                               <Label className="flex items-center gap-1.5">
-                                <Icon name="Ram" size="sm" aria-hidden="true" /> Mémoire
+                                <Icon name="Ram" size="sm" aria-hidden={true} /> Mémoire
                               </Label>
                               <span className="text-sm font-medium">{estimate.resourceUsage.memory}%</span>
                             </div>
@@ -619,7 +619,7 @@ export default function PerformanceCalculatorPage() {
                           <div className="space-y-2">
                             <div className="flex justify-between items-center">
                               <Label className="flex items-center gap-1.5">
-                                <Icon name="Globe" size="sm" aria-hidden="true" /> Réseau
+                                <Icon name="Globe" size="sm" aria-hidden={true} /> Réseau
                               </Label>
                               <span className="text-sm font-medium">{estimate.resourceUsage.network}%</span>
                             </div>
@@ -640,7 +640,7 @@ export default function PerformanceCalculatorPage() {
                           <div className="space-y-2">
                             <div className="flex justify-between items-center">
                               <Label className="flex items-center gap-1.5">
-                                <Icon name="Database" size="sm" aria-hidden="true" /> Stockage
+                                <Icon name="Database" size="sm" aria-hidden={true} /> Stockage
                               </Label>
                               <span className="text-sm font-medium">{estimate.resourceUsage.storage}%</span>
                             </div>
@@ -661,7 +661,7 @@ export default function PerformanceCalculatorPage() {
                           <div className="space-y-2">
                             <div className="flex justify-between items-center">
                               <Label className="flex items-center gap-1.5">
-                                <Icon name="Network" size="sm" aria-hidden="true" /> Réseau
+                                <Icon name="Network" size="sm" aria-hidden={true} /> Réseau
                               </Label>
                               <span className="text-sm font-medium">{estimate.resourceUsage.network}%</span>
                             </div>
@@ -709,7 +709,7 @@ export default function PerformanceCalculatorPage() {
                                   : "text-green-500"
                               }
                               size="md"
-                              aria-hidden="true"
+                              aria-hidden={true}
                             />
                             <div>
                               <h4 className="font-medium">Utilisation Globale des Ressources</h4>
@@ -738,7 +738,7 @@ export default function PerformanceCalculatorPage() {
                               name={estimate.resourceUsage.cpu > 70 ? "AlertCircle" : "CheckCircle"}
                               className={estimate.resourceUsage.cpu > 70 ? "text-yellow-500" : "text-green-500"}
                               size="md"
-                              aria-hidden="true"
+                              aria-hidden={true}
                             />
                             <div>
                               <h4 className="font-medium">Utilisation CPU</h4>
@@ -755,7 +755,7 @@ export default function PerformanceCalculatorPage() {
                               name={estimate.resourceUsage.memory > 80 ? "AlertCircle" : "CheckCircle"}
                               className={estimate.resourceUsage.memory > 80 ? "text-yellow-500" : "text-green-500"}
                               size="md"
-                              aria-hidden="true"
+                              aria-hidden={true}
                             />
                             <div>
                               <h4 className="font-medium">Utilisation Mémoire</h4>
@@ -773,7 +773,7 @@ export default function PerformanceCalculatorPage() {
                   <TabsContent value="recommendations" className="mt-0">
                     <div className="space-y-6">
                       <Alert>
-                        <Icon name="Info" className="h-4 w-4" aria-hidden="true" />
+                        <Icon name="Info" className="h-4 w-4" aria-hidden={true} />
                         <AlertTitle>Recommandations d'Optimisation</AlertTitle>
                         <AlertDescription>
                           Basées sur les paramètres de votre application, voici des suggestions pour améliorer les
@@ -785,7 +785,7 @@ export default function PerformanceCalculatorPage() {
                         {estimate.recommendations.length > 0 ? (
                           estimate.recommendations.map((recommendation, index) => (
                             <div key={index} className="flex items-start gap-3 p-3 border rounded-lg">
-                              <Icon name="Lightbulb" className="text-primary mt-0.5" size="md" aria-hidden="true" />
+                              <Icon name="Lightbulb" className="text-primary mt-0.5" size="md" aria-hidden={true} />
                               <div>
                                 <p>{recommendation}</p>
                               </div>
@@ -793,7 +793,7 @@ export default function PerformanceCalculatorPage() {
                           ))
                         ) : (
                           <div className="flex items-start gap-3 p-3 border rounded-lg">
-                            <Icon name="CheckCircle" className="text-green-500 mt-0.5" size="md" aria-hidden="true" />
+                            <Icon name="CheckCircle" className="text-green-500 mt-0.5" size="md" aria-hidden={true} />
                             <div>
                               <p>
                                 Votre configuration actuelle semble bien optimisée. Continuez à surveiller les
@@ -808,25 +808,25 @@ export default function PerformanceCalculatorPage() {
                         <h3 className="font-semibold">Bonnes Pratiques Générales</h3>
                         <ul className="space-y-2">
                           <li className="flex items-start gap-2">
-                            <Icon name="CheckCircle2" size="sm" className="text-primary mt-0.5" aria-hidden="true" />
+                            <Icon name="CheckCircle2" size="sm" className="text-primary mt-0.5" aria-hidden={true} />
                             <span>
                               Mettez en place un monitoring continu pour détecter les problèmes de performance
                             </span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <Icon name="CheckCircle2" size="sm" className="text-primary mt-0.5" aria-hidden="true" />
+                            <Icon name="CheckCircle2" size="sm" className="text-primary mt-0.5" aria-hidden={true} />
                             <span>Effectuez des tests de charge réguliers pour valider les performances</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <Icon name="CheckCircle2" size="sm" className="text-primary mt-0.5" aria-hidden="true" />
+                            <Icon name="CheckCircle2" size="sm" className="text-primary mt-0.5" aria-hidden={true} />
                             <span>Optimisez les requêtes de base de données et utilisez des index appropriés</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <Icon name="CheckCircle2" size="sm" className="text-primary mt-0.5" aria-hidden="true" />
+                            <Icon name="CheckCircle2" size="sm" className="text-primary mt-0.5" aria-hidden={true} />
                             <span>Mettez en cache les résultats des opérations coûteuses</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <Icon name="CheckCircle2" size="sm" className="text-primary mt-0.5" aria-hidden="true" />
+                            <Icon name="CheckCircle2" size="sm" className="text-primary mt-0.5" aria-hidden={true} />
                             <span>Utilisez des architectures évolutives pour gérer la croissance</span>
                           </li>
                         </ul>
@@ -838,12 +838,12 @@ export default function PerformanceCalculatorPage() {
               <CardFooter className="flex justify-between border-t pt-6">
                 <Button variant="outline" asChild>
                   <Link href="/contact">
-                    <Icon name="Mail" size="sm" className="mr-2" aria-hidden="true" /> Discuter de ces résultats
+                    <Icon name="Mail" size="sm" className="mr-2" aria-hidden={true} /> Discuter de ces résultats
                   </Link>
                 </Button>
                 <Button asChild>
                   <Link href="/appointment">
-                    <Icon name="Calendar" size="sm" className="mr-2" aria-hidden="true" /> Prendre
+                    <Icon name="Calendar" size="sm" className="mr-2" aria-hidden={true} /> Prendre
                   </Link>
                 </Button>
               </CardFooter>
@@ -869,7 +869,7 @@ export default function PerformanceCalculatorPage() {
               </div>
 
               <Alert>
-                <Icon name="Info" className="h-4 w-4" aria-hidden="true" />
+                <Icon name="Info" className="h-4 w-4" aria-hidden={true} />
                 <AlertTitle>Note</AlertTitle>
                 <AlertDescription>
                   Les estimations sont basées sur des modèles théoriques et peuvent varier en fonction de nombreux
@@ -887,19 +887,19 @@ export default function PerformanceCalculatorPage() {
               <p className="text-muted-foreground">Les performances d'une application ont un impact direct sur :</p>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
-                  <Icon name="CheckCircle" className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" aria-hidden="true" />
+                  <Icon name="CheckCircle" className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" aria-hidden={true} />
                   <span>L'expérience utilisateur et la satisfaction client</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <Icon name="CheckCircle" className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" aria-hidden="true" />
+                  <Icon name="CheckCircle" className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" aria-hidden={true} />
                   <span>Les taux de conversion et la rétention des utilisateurs</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <Icon name="CheckCircle" className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" aria-hidden="true" />
+                  <Icon name="CheckCircle" className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" aria-hidden={true} />
                   <span>Les coûts d'infrastructure et d'exploitation</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <Icon name="CheckCircle" className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" aria-hidden="true" />
+                  <Icon name="CheckCircle" className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" aria-hidden={true} />
                   <span>La capacité à gérer la croissance et les pics de trafic</span>
                 </li>
               </ul>

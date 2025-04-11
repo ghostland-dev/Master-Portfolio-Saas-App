@@ -62,7 +62,7 @@ export default function ClientsPage() {
             onChange={(e) => setSearchQuery(e.target.value)}
           />
           <Button>
-            <Icon name="Plus" size="sm" className="mr-2" aria-hidden="true" /> Ajouter un client
+            <Icon name="Plus" size="sm" className="mr-2" aria-hidden={true} /> Ajouter un client
           </Button>
         </div>
       </div>

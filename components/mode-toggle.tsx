@@ -25,7 +25,7 @@ export function ModeToggle({ variant = "dropdown" }: { variant?: "dropdown" | "s
   if (variant === "switch") {
     return (
       <div className="flex items-center gap-2">
-        <Icon name="Sun" className="h-4 w-4 text-muted-foreground" aria-hidden="true" />
+        <Icon name="Sun" className="h-4 w-4 text-muted-foreground" aria-hidden={true} />
         <Switch
           checked={theme === "dark"}
           onCheckedChange={(checked) => setTheme(checked ? "dark" : "light")}
@@ -34,7 +34,7 @@ export function ModeToggle({ variant = "dropdown" }: { variant?: "dropdown" | "s
         >
           <span className="theme-switch-thumb" />
         </Switch>
-        <Icon name="Moon" className="h-4 w-4 text-muted-foreground" aria-hidden="true" />
+        <Icon name="Moon" className="h-4 w-4 text-muted-foreground" aria-hidden={true} />
       </div>
     )
   }
@@ -53,12 +53,12 @@ export function ModeToggle({ variant = "dropdown" }: { variant?: "dropdown" | "s
               <Icon
                 name="Sun"
                 className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
-                aria-hidden="true"
+                aria-hidden={true}
               />
               <Icon
                 name="Moon"
                 className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
-                aria-hidden="true"
+                aria-hidden={true}
               />
             </Button>
           </TooltipTrigger>
@@ -77,24 +77,24 @@ export function ModeToggle({ variant = "dropdown" }: { variant?: "dropdown" | "s
           <Icon
             name="Sun"
             className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
-            aria-hidden="true"
+            aria-hidden={true}
           />
           <Icon
             name="Moon"
             className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
-            aria-hidden="true"
+            aria-hidden={true}
           />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => setTheme("light")} className="flex items-center gap-2">
-          <Icon name="Sun" size="sm" aria-hidden="true" /> Mode clair
+          <Icon name="Sun" size="sm" aria-hidden={true} /> Mode clair
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("dark")} className="flex items-center gap-2">
-          <Icon name="Moon" size="sm" aria-hidden="true" /> Mode sombre
+          <Icon name="Moon" size="sm" aria-hidden={true} /> Mode sombre
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("system")} className="flex items-center gap-2">
-          <Icon name="Laptop" size="sm" aria-hidden="true" /> Système
+          <Icon name="Laptop" size="sm" aria-hidden={true} /> Système
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

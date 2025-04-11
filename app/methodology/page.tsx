@@ -34,25 +34,25 @@ export default function MethodologyPage() {
                 </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-start gap-2">
-                    <Icon name="CheckCircle" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="CheckCircle" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>Sprints de 1 à 2 semaines pour des livraisons régulières</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="CheckCircle" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="CheckCircle" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>Réunions quotidiennes pour suivre l'avancement</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="CheckCircle" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="CheckCircle" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>Revues de sprint et rétrospectives pour l'amélioration continue</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="CheckCircle" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="CheckCircle" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>Implication continue du client pour des feedbacks réguliers</span>
                   </li>
                 </ul>
                 <Button asChild>
                   <Link href="/contact">
-                    Discuter de votre projet <Icon name="ArrowRight" className="ml-2 h-4 w-4" aria-hidden="true" />
+                    Discuter de votre projet <Icon name="ArrowRight" className="ml-2 h-4 w-4" aria-hidden={true} />
                   </Link>
                 </Button>
               </div>
@@ -76,25 +76,25 @@ export default function MethodologyPage() {
                 </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-start gap-2">
-                    <Icon name="CheckCircle" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="CheckCircle" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>Intégration et déploiement continus (CI/CD)</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="CheckCircle" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="CheckCircle" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>Infrastructure as Code pour des environnements reproductibles</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="CheckCircle" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="CheckCircle" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>Monitoring et observabilité pour une détection rapide des problèmes</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="CheckCircle" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="CheckCircle" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>Automatisation des tests pour garantir la qualité</span>
                   </li>
                 </ul>
                 <Button asChild>
                   <Link href="/services">
-                    Découvrir mes services DevOps <Icon name="ArrowRight" className="ml-2 h-4 w-4" aria-hidden="true" />
+                    Découvrir mes services DevOps <Icon name="ArrowRight" className="ml-2 h-4 w-4" aria-hidden={true} />
                   </Link>
                 </Button>
               </div>
@@ -118,25 +118,25 @@ export default function MethodologyPage() {
                 </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-start gap-2">
-                    <Icon name="CheckCircle" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="CheckCircle" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>Empathie avec les utilisateurs finaux</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="CheckCircle" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="CheckCircle" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>Définition précise des problèmes à résoudre</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="CheckCircle" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="CheckCircle" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>Idéation collaborative pour des solutions innovantes</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="CheckCircle" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="CheckCircle" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>Prototypage rapide et tests utilisateurs itératifs</span>
                   </li>
                 </ul>
                 <Button asChild>
                   <Link href="/portfolio">
-                    Voir mes projets <Icon name="ArrowRight" className="ml-2 h-4 w-4" aria-hidden="true" />
+                    Voir mes projets <Icon name="ArrowRight" className="ml-2 h-4 w-4" aria-hidden={true} />
                   </Link>
                 </Button>
               </div>
@@ -159,7 +159,7 @@ export default function MethodologyPage() {
               <Card className="card-hover-effect">
                 <CardHeader>
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-2">
-                    <Icon name="Search" className="h-6 w-6 text-primary" aria-hidden="true" />
+                    <Icon name="Search" className="h-6 w-6 text-primary" aria-hidden={true} />
                   </div>
                   <CardTitle>1. Découverte</CardTitle>
                 </CardHeader>
@@ -172,7 +172,7 @@ export default function MethodologyPage() {
               <Card className="card-hover-effect">
                 <CardHeader>
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-2">
-                    <Icon name="PenTool" className="h-6 w-6 text-primary" aria-hidden="true" />
+                    <Icon name="PenTool" className="h-6 w-6 text-primary" aria-hidden={true} />
                   </div>
                   <CardTitle>2. Conception</CardTitle>
                 </CardHeader>
@@ -185,7 +185,7 @@ export default function MethodologyPage() {
               <Card className="card-hover-effect">
                 <CardHeader>
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-2">
-                    <Icon name="Code" className="h-6 w-6 text-primary" aria-hidden="true" />
+                    <Icon name="Code" className="h-6 w-6 text-primary" aria-hidden={true} />
                   </div>
                   <CardTitle>3. Développement</CardTitle>
                 </CardHeader>
@@ -199,7 +199,7 @@ export default function MethodologyPage() {
               <Card className="card-hover-effect">
                 <CardHeader>
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-2">
-                    <Icon name="Rocket" className="h-6 w-6 text-primary" aria-hidden="true" />
+                    <Icon name="Rocket" className="h-6 w-6 text-primary" aria-hidden={true} />
                   </div>
                   <CardTitle>4. Déploiement</CardTitle>
                 </CardHeader>
@@ -222,19 +222,19 @@ export default function MethodologyPage() {
                 <CardContent>
                   <ul className="space-y-2">
                     <li className="flex items-center gap-2">
-                      <Icon name="CheckSquare" className="h-5 w-5 text-primary" aria-hidden="true" />
+                      <Icon name="CheckSquare" className="h-5 w-5 text-primary" aria-hidden={true} />
                       <span>Jira</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <Icon name="Trello" className="h-5 w-5 text-primary" aria-hidden="true" />
+                      <Icon name="Trello" className="h-5 w-5 text-primary" aria-hidden={true} />
                       <span>Trello</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <Icon name="GitPullRequest" className="h-5 w-5 text-primary" aria-hidden="true" />
+                      <Icon name="GitPullRequest" className="h-5 w-5 text-primary" aria-hidden={true} />
                       <span>GitHub Projects</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <Icon name="Clock" className="h-5 w-5 text-primary" aria-hidden="true" />
+                      <Icon name="Clock" className="h-5 w-5 text-primary" aria-hidden={true} />
                       <span>Notion</span>
                     </li>
                   </ul>
@@ -247,19 +247,19 @@ export default function MethodologyPage() {
                 <CardContent>
                   <ul className="space-y-2">
                     <li className="flex items-center gap-2">
-                      <Icon name="MessageSquare" className="h-5 w-5 text-primary" aria-hidden="true" />
+                      <Icon name="MessageSquare" className="h-5 w-5 text-primary" aria-hidden={true} />
                       <span>Slack</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <Icon name="Video" className="h-5 w-5 text-primary" aria-hidden="true" />
+                      <Icon name="Video" className="h-5 w-5 text-primary" aria-hidden={true} />
                       <span>Microsoft Teams</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <Icon name="FileText" className="h-5 w-5 text-primary" aria-hidden="true" />
+                      <Icon name="FileText" className="h-5 w-5 text-primary" aria-hidden={true} />
                       <span>Confluence</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <Icon name="Users" className="h-5 w-5 text-primary" aria-hidden="true" />
+                      <Icon name="Users" className="h-5 w-5 text-primary" aria-hidden={true} />
                       <span>Miro</span>
                     </li>
                   </ul>
@@ -272,19 +272,19 @@ export default function MethodologyPage() {
                 <CardContent>
                   <ul className="space-y-2">
                     <li className="flex items-center gap-2">
-                      <Icon name="GitBranch" className="h-5 w-5 text-primary" aria-hidden="true" />
+                      <Icon name="GitBranch" className="h-5 w-5 text-primary" aria-hidden={true} />
                       <span>GitHub Actions</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <Icon name="Box" className="h-5 w-5 text-primary" aria-hidden="true" />
+                      <Icon name="Box" className="h-5 w-5 text-primary" aria-hidden={true} />
                       <span>Docker</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <Icon name="Cpu" className="h-5 w-5 text-primary" aria-hidden="true" />
+                      <Icon name="Cpu" className="h-5 w-5 text-primary" aria-hidden={true} />
                       <span>Kubernetes</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <Icon name="Terminal" className="h-5 w-5 text-primary" aria-hidden="true" />
+                      <Icon name="Terminal" className="h-5 w-5 text-primary" aria-hidden={true} />
                       <span>Terraform</span>
                     </li>
                   </ul>
@@ -304,12 +304,12 @@ export default function MethodologyPage() {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button asChild size="lg" className="animate-pulse-slow">
                     <Link href="/appointment">
-                      <Icon name="Calendar" className="mr-2 h-4 w-4" aria-hidden="true" /> Prendre rendez-vous
+                      <Icon name="Calendar" className="mr-2 h-4 w-4" aria-hidden={true} /> Prendre rendez-vous
                     </Link>
                   </Button>
                   <Button variant="outline" asChild size="lg">
                     <Link href="/contact">
-                      <Icon name="Mail" className="mr-2 h-4 w-4" aria-hidden="true" /> Me contacter
+                      <Icon name="Mail" className="mr-2 h-4 w-4" aria-hidden={true} /> Me contacter
                     </Link>
                   </Button>
                 </div>

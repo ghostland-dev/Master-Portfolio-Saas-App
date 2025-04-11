@@ -50,7 +50,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     return (
       <div className="flex min-h-screen flex-col items-center justify-center dashboard-layout">
         <div className="flex items-center gap-2">
-          <Icon name="Loader2" className="h-6 w-6 animate-spin" aria-hidden="true" />
+          <Icon name="Loader2" className="h-6 w-6 animate-spin" aria-hidden={true} />
           <span className="text-lg">Initialisation...</span>
         </div>
       </div>
@@ -62,7 +62,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     return (
       <div className="flex min-h-screen flex-col items-center justify-center dashboard-layout">
         <div className="flex items-center gap-2">
-          <Icon name="Loader2" className="h-6 w-6 animate-spin" aria-hidden="true" />
+          <Icon name="Loader2" className="h-6 w-6 animate-spin" aria-hidden={true} />
           <span className="text-lg">Chargement de votre espace...</span>
         </div>
       </div>
@@ -74,14 +74,14 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     return (
       <div className="flex min-h-screen flex-col items-center justify-center dashboard-layout">
         <div className="flex flex-col items-center gap-4">
-          <Icon name="ShieldAlert" className="h-12 w-12 text-red-500" aria-hidden="true" />
+          <Icon name="ShieldAlert" className="h-12 w-12 text-red-500" aria-hidden={true} />
           <span className="text-xl">Accès non autorisé</span>
           <p className="text-muted-foreground text-center max-w-md">
             Vous devez être connecté pour accéder à cette page.
           </p>
           <Button asChild className="mt-4">
             <Link href={`/login?redirect=${encodeURIComponent(pathname || "/dashboard")}&unauthorized=true`}>
-              <Icon name="LogIn" size="sm" className="mr-2" aria-hidden="true" />
+              <Icon name="LogIn" size="sm" className="mr-2" aria-hidden={true} />
               Se connecter
             </Link>
           </Button>
@@ -123,7 +123,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           <ScrollArea className="flex-1">
             <div className="flex items-center gap-4 lg:gap-6 pb-2">
               <Link href="/dashboard" className="flex items-center gap-2 text-lg font-semibold">
-                <Icon name="LayoutDashboard" size="sm" aria-hidden="true" />
+                <Icon name="LayoutDashboard" size="sm" aria-hidden={true} />
                 <span>Espace Client</span>
               </Link>
               <Separator orientation="vertical" className="h-6" />
@@ -141,7 +141,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                     size="sm"
                     variant={pathname === item.path ? "solid" : "outline"}
                     className="transition-all duration-200"
-                    aria-hidden="true"
+                    aria-hidden={true}
                   />
                   {item.name}
                 </Link>
@@ -169,26 +169,26 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                 <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
                   <Link href="/dashboard/profile">
-                    <Icon name="User" className="mr-2 h-4 w-4" aria-hidden="true" />
+                    <Icon name="User" className="mr-2 h-4 w-4" aria-hidden={true} />
                     <span>Mon profil</span>
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link href="/dashboard/settings">
-                    <Icon name="Settings" className="mr-2 h-4 w-4" aria-hidden="true" />
+                    <Icon name="Settings" className="mr-2 h-4 w-4" aria-hidden={true} />
                     <span>Paramètres</span>
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem onClick={logout}>
-                  <Icon name="LogOut" className="mr-2 h-4 w-4" aria-hidden="true" />
+                  <Icon name="LogOut" className="mr-2 h-4 w-4" aria-hidden={true} />
                   <span>Se déconnecter</span>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
             <Button variant="outline" size="sm" asChild>
               <Link href="/">
-                <Icon name="ArrowLeft" size="sm" className="mr-2" aria-hidden="true" />
+                <Icon name="ArrowLeft" size="sm" className="mr-2" aria-hidden={true} />
                 Retour au site
               </Link>
             </Button>

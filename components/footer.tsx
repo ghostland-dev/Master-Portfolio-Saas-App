@@ -18,7 +18,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary"
               >
-                <Icon name="Github" aria-hidden="true" />
+                <Icon name="Github" aria-hidden={true} />
                 <span className="sr-only">GitHub</span>
               </Link>
               <Link
@@ -27,7 +27,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary"
               >
-                <Icon name="Linkedin" aria-hidden="true" />
+                <Icon name="Linkedin" aria-hidden={true} />
                 <span className="sr-only">LinkedIn</span>
               </Link>
               <Link
@@ -36,7 +36,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary"
               >
-                <Icon name="Twitter" aria-hidden="true" />
+                <Icon name="Twitter" aria-hidden={true} />
                 <span className="sr-only">Twitter</span>
               </Link>
             </div>

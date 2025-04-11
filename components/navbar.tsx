@@ -104,7 +104,7 @@ export default function Navbar() {
                   size="sm"
                   variant={pathname === route.path ? "solid" : "outline"}
                   className={cn("transition-transform", pathname === route.path && "scale-110")}
-                  aria-hidden="true"
+                  aria-hidden={true}
                 />
                 {route.name}
                 {index === activeIndex && (
@@ -130,7 +130,7 @@ export default function Navbar() {
           <ModeToggle />
           <Button asChild variant="default" className="shadow-sm hover:shadow transition-all">
             <Link href="/appointment">
-              <Icon name="Calendar" size="sm" className="mr-2" aria-hidden="true" /> Rendez-vous
+              <Icon name="Calendar" size="sm" className="mr-2" aria-hidden={true} /> Rendez-vous
             </Link>
           </Button>
 
@@ -143,7 +143,7 @@ export default function Navbar() {
                     <AvatarFallback>{user?.name?.charAt(0) || "U"}</AvatarFallback>
                   </Avatar>
                   <span className="max-w-[100px] truncate">{user?.name}</span>
-                  <Icon name="ChevronDown" size="sm" aria-hidden="true" />
+                  <Icon name="ChevronDown" size="sm" aria-hidden={true} />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="w-56">
@@ -151,19 +151,19 @@ export default function Navbar() {
                 <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
                   <Link href="/dashboard">
-                    <Icon name="LayoutDashboard" className="mr-2 h-4 w-4" aria-hidden="true" />
+                    <Icon name="LayoutDashboard" className="mr-2 h-4 w-4" aria-hidden={true} />
                     <span>Tableau de bord</span>
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link href="/dashboard/profile">
-                    <Icon name="User" className="mr-2 h-4 w-4" aria-hidden="true" />
+                    <Icon name="User" className="mr-2 h-4 w-4" aria-hidden={true} />
                     <span>Profil</span>
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem onClick={logout} className="text-red-500 focus:text-red-500">
-                  <Icon name="LogOut" className="mr-2 h-4 w-4" aria-hidden="true" />
+                  <Icon name="LogOut" className="mr-2 h-4 w-4" aria-hidden={true} />
                   <span>Se déconnecter</span>
                 </DropdownMenuItem>
               </DropdownMenuContent>
@@ -171,7 +171,7 @@ export default function Navbar() {
           ) : (
             <Button variant="outline" asChild className="hover:bg-primary/10 transition-colors">
               <Link href="/login">
-                <Icon name="LogIn" size="sm" className="mr-2" aria-hidden="true" /> Connexion
+                <Icon name="LogIn" size="sm" className="mr-2" aria-hidden={true} /> Connexion
               </Link>
             </Button>
           )}
@@ -243,7 +243,7 @@ export default function Navbar() {
                       name={route.icon as any}
                       size="md"
                       variant={pathname === route.path ? "solid" : "outline"}
-                      aria-hidden="true"
+                      aria-hidden={true}
                     />
                     {route.name}
                   </Link>
@@ -257,7 +257,7 @@ export default function Navbar() {
                 >
                   <Button asChild className="w-full justify-center" size="lg">
                     <Link href="/appointment" onClick={() => setIsOpen(false)}>
-                      <Icon name="Calendar" size="sm" className="mr-2" aria-hidden="true" /> Prendre rendez-vous
+                      <Icon name="Calendar" size="sm" className="mr-2" aria-hidden={true} /> Prendre rendez-vous
                     </Link>
                   </Button>
                 </motion.div>
@@ -271,7 +271,7 @@ export default function Navbar() {
                     >
                       <Button variant="outline" asChild className="w-full justify-center" size="lg">
                         <Link href="/dashboard" onClick={() => setIsOpen(false)}>
-                          <Icon name="LayoutDashboard" size="sm" className="mr-2" aria-hidden="true" /> Espace Client
+                          <Icon name="LayoutDashboard" size="sm" className="mr-2" aria-hidden={true} /> Espace Client
                         </Link>
                       </Button>
                     </motion.div>
@@ -289,7 +289,7 @@ export default function Navbar() {
                           setIsOpen(false)
                         }}
                       >
-                        <Icon name="LogOut" size="sm" className="mr-2" aria-hidden="true" /> Se déconnecter
+                        <Icon name="LogOut" size="sm" className="mr-2" aria-hidden={true} /> Se déconnecter
                       </Button>
                     </motion.div>
                   </>
@@ -301,7 +301,7 @@ export default function Navbar() {
                   >
                     <Button variant="outline" asChild className="w-full justify-center" size="lg">
                       <Link href="/login" onClick={() => setIsOpen(false)}>
-                        <Icon name="LogIn" size="sm" className="mr-2" aria-hidden="true" /> Connexion
+                        <Icon name="LogIn" size="sm" className="mr-2" aria-hidden={true} /> Connexion
                       </Link>
                     </Button>
                   </motion.div>

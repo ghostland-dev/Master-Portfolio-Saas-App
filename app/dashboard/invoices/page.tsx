@@ -65,7 +65,7 @@ export default function InvoicesPage() {
             onChange={(e) => setSearchQuery(e.target.value)}
           />
           <Button>
-            <Icon name="Plus" size="sm" className="mr-2" aria-hidden="true" /> Ajouter une facture
+            <Icon name="Plus" size="sm" className="mr-2" aria-hidden={true} /> Ajouter une facture
           </Button>
         </div>
       </div>

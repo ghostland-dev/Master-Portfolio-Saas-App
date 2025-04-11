@@ -69,7 +69,7 @@ export default function ProjectsPage() {
           />
           <Button asChild>
             <Link href="/dashboard/projects/new">
-              <Icon name="Plus" size="sm" className="mr-2" aria-hidden="true" /> Ajouter un projet
+              <Icon name="Plus" size="sm" className="mr-2" aria-hidden={true} /> Ajouter un projet
             </Link>
           </Button>
         </div>

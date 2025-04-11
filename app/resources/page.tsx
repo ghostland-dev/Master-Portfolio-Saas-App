@@ -59,7 +59,7 @@ export default function ResourcesPage() {
               <CardFooter>
                 <Button asChild className="w-full">
                   <Link href="/resources/react-starter-template">
-                    <Icon name="Download" className="mr-2 h-4 w-4" aria-hidden="true" />
+                    <Icon name="Download" className="mr-2 h-4 w-4" aria-hidden={true} />
                     Télécharger
                   </Link>
                 </Button>
@@ -95,7 +95,7 @@ export default function ResourcesPage() {
               <CardFooter>
                 <Button asChild className="w-full">
                   <Link href="/resources/nextjs-blog-template">
-                    <Icon name="Download" className="mr-2 h-4 w-4" aria-hidden="true" />
+                    <Icon name="Download" className="mr-2 h-4 w-4" aria-hidden={true} />
                     Télécharger
                   </Link>
                 </Button>
@@ -131,7 +131,7 @@ export default function ResourcesPage() {
               <CardFooter>
                 <Button asChild className="w-full">
                   <Link href="/resources/docker-compose-templates">
-                    <Icon name="Download" className="mr-2 h-4 w-4" aria-hidden="true" />
+                    <Icon name="Download" className="mr-2 h-4 w-4" aria-hidden={true} />
                     Télécharger
                   </Link>
                 </Button>
@@ -171,7 +171,7 @@ export default function ResourcesPage() {
               <CardFooter>
                 <Button asChild className="w-full">
                   <Link href="/resources/react-hooks-guide">
-                    <Icon name="FileText" className="mr-2 h-4 w-4" aria-hidden="true" />
+                    <Icon name="FileText" className="mr-2 h-4 w-4" aria-hidden={true} />
                     Lire le guide
                   </Link>
                 </Button>
@@ -207,7 +207,7 @@ export default function ResourcesPage() {
               <CardFooter>
                 <Button asChild className="w-full">
                   <Link href="/resources/github-actions-guide">
-                    <Icon name="FileText" className="mr-2 h-4 w-4" aria-hidden="true" />
+                    <Icon name="FileText" className="mr-2 h-4 w-4" aria-hidden={true} />
                     Lire le guide
                   </Link>
                 </Button>
@@ -244,7 +244,7 @@ export default function ResourcesPage() {
               <CardFooter>
                 <Button asChild className="w-full">
                   <Link href="/resources/typescript-guide">
-                    <Icon name="FileText" className="mr-2 h-4 w-4" aria-hidden="true" />
+                    <Icon name="FileText" className="mr-2 h-4 w-4" aria-hidden={true} />
                     Lire le guide
                   </Link>
                 </Button>
@@ -284,7 +284,7 @@ export default function ResourcesPage() {
               <CardFooter>
                 <Button asChild className="w-full">
                   <Link href="/tools/devops-checklist">
-                    <Icon name="CheckSquare" className="mr-2 h-4 w-4" aria-hidden="true" />
+                    <Icon name="CheckSquare" className="mr-2 h-4 w-4" aria-hidden={true} />
                     Accéder à la checklist
                   </Link>
                 </Button>
@@ -320,7 +320,7 @@ export default function ResourcesPage() {
               <CardFooter>
                 <Button asChild className="w-full">
                   <Link href="/resources/web-security-checklist">
-                    <Icon name="Shield" className="mr-2 h-4 w-4" aria-hidden="true" />
+                    <Icon name="Shield" className="mr-2 h-4 w-4" aria-hidden={true} />
                     Télécharger la checklist
                   </Link>
                 </Button>
@@ -359,7 +359,7 @@ export default function ResourcesPage() {
               <CardFooter>
                 <Button asChild className="w-full">
                   <Link href="/resources/project-launch-checklist">
-                    <Icon name="Rocket" className="mr-2 h-4 w-4" aria-hidden="true" />
+                    <Icon name="Rocket" className="mr-2 h-4 w-4" aria-hidden={true} />
                     Télécharger la checklist
                   </Link>
                 </Button>
@@ -400,7 +400,7 @@ export default function ResourcesPage() {
               <CardFooter>
                 <Button asChild className="w-full">
                   <Link href="/tools/project-planner">
-                    <Icon name="Calendar" className="mr-2 h-4 w-4" aria-hidden="true" />
+                    <Icon name="Calendar" className="mr-2 h-4 w-4" aria-hidden={true} />
                     Accéder à l'outil
                   </Link>
                 </Button>
@@ -435,7 +435,7 @@ export default function ResourcesPage() {
               <CardFooter>
                 <Button asChild className="w-full">
                   <Link href="/tools/budget-simulator">
-                    <Icon name="Calculator" className="mr-2 h-4 w-4" aria-hidden="true" />
+                    <Icon name="Calculator" className="mr-2 h-4 w-4" aria-hidden={true} />
                     Accéder à l'outil
                   </Link>
                 </Button>
@@ -471,7 +471,7 @@ export default function ResourcesPage() {
               <CardFooter>
                 <Button asChild className="w-full">
                   <Link href="/tools/technology-selector">
-                    <Icon name="Layers" className="mr-2 h-4 w-4" aria-hidden="true" />
+                    <Icon name="Layers" className="mr-2 h-4 w-4" aria-hidden={true} />
                     Accéder à l'outil
                   </Link>
                 </Button>
@@ -494,7 +494,7 @@ export default function ResourcesPage() {
                 <ul className="space-y-4">
                   <li className="flex items-center gap-4">
                     <div className="bg-primary/10 p-2 rounded-full">
-                      <Icon name="Download" className="h-5 w-5 text-primary" aria-hidden="true" />
+                      <Icon name="Download" className="h-5 w-5 text-primary" aria-hidden={true} />
                     </div>
                     <div className="flex-1">
                       <Link
@@ -508,7 +508,7 @@ export default function ResourcesPage() {
                   </li>
                   <li className="flex items-center gap-4">
                     <div className="bg-primary/10 p-2 rounded-full">
-                      <Icon name="Download" className="h-5 w-5 text-primary" aria-hidden="true" />
+                      <Icon name="Download" className="h-5 w-5 text-primary" aria-hidden={true} />
                     </div>
                     <div className="flex-1">
                       <Link
@@ -522,7 +522,7 @@ export default function ResourcesPage() {
                   </li>
                   <li className="flex items-center gap-4">
                     <div className="bg-primary/10 p-2 rounded-full">
-                      <Icon name="Download" className="h-5 w-5 text-primary" aria-hidden="true" />
+                      <Icon name="Download" className="h-5 w-5 text-primary" aria-hidden={true} />
                     </div>
                     <div className="flex-1">
                       <Link
@@ -547,7 +547,7 @@ export default function ResourcesPage() {
                 <ul className="space-y-4">
                   <li className="flex items-center gap-4">
                     <div className="bg-primary/10 p-2 rounded-full">
-                      <Icon name="FileText" className="h-5 w-5 text-primary" aria-hidden="true" />
+                      <Icon name="FileText" className="h-5 w-5 text-primary" aria-hidden={true} />
                     </div>
                     <div className="flex-1">
                       <Link
@@ -561,7 +561,7 @@ export default function ResourcesPage() {
                   </li>
                   <li className="flex items-center gap-4">
                     <div className="bg-primary/10 p-2 rounded-full">
-                      <Icon name="FileText" className="h-5 w-5 text-primary" aria-hidden="true" />
+                      <Icon name="FileText" className="h-5 w-5 text-primary" aria-hidden={true} />
                     </div>
                     <div className="flex-1">
                       <Link
@@ -575,7 +575,7 @@ export default function ResourcesPage() {
                   </li>
                   <li className="flex items-center gap-4">
                     <div className="bg-primary/10 p-2 rounded-full">
-                      <Icon name="FileText" className="h-5 w-5 text-primary" aria-hidden="true" />
+                      <Icon name="FileText" className="h-5 w-5 text-primary" aria-hidden={true} />
                     </div>
                     <div className="flex-1">
                       <Link
@@ -602,7 +602,7 @@ export default function ResourcesPage() {
             </p>
             <Button asChild size="lg" className="mt-4">
               <Link href="/contact">
-                <Icon name="Mail" className="mr-2 h-4 w-4" aria-hidden="true" />
+                <Icon name="Mail" className="mr-2 h-4 w-4" aria-hidden={true} />
                 Me contacter
               </Link>
             </Button>

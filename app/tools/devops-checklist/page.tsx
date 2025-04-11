@@ -477,7 +477,7 @@ export default function DevOpsChecklistPage() {
                 <TabsList className="grid grid-cols-3 md:grid-cols-6 mb-8">
                   {categories.map((category) => (
                     <TabsTrigger key={category.id} value={category.id} className="flex items-center gap-1.5">
-                      <Icon name={category.icon as any} size="sm" aria-hidden="true" />
+                      <Icon name={category.icon as any} size="sm" aria-hidden={true} />
                       <span className="hidden md:inline">{category.name}</span>
                     </TabsTrigger>
                   ))}
@@ -488,7 +488,7 @@ export default function DevOpsChecklistPage() {
                     <div className="flex items-center justify-between mb-4">
                       <div>
                         <h3 className="text-xl font-semibold flex items-center gap-2">
-                          <Icon name={category.icon as any} className="text-primary" aria-hidden="true" />
+                          <Icon name={category.icon as any} className="text-primary" aria-hidden={true} />
                           {category.name}
                         </h3>
                         <p className="text-muted-foreground">{category.description}</p>
@@ -537,7 +537,7 @@ export default function DevOpsChecklistPage() {
                             <p className="text-sm text-muted-foreground mt-1">{item.description}</p>
                             <div className="flex flex-wrap gap-2 mt-2">
                               <Badge variant="outline" className={getDifficultyColor(item.difficulty)}>
-                                <Icon name="Gauge" size="xs" className="mr-1" aria-hidden="true" />
+                                <Icon name="Gauge" size="xs" className="mr-1" aria-hidden={true} />
                                 {item.difficulty === "easy"
                                   ? "Facile"
                                   : item.difficulty === "medium"
@@ -545,7 +545,7 @@ export default function DevOpsChecklistPage() {
                                     : "Difficile"}
                               </Badge>
                               <Badge variant="outline" className={getImpactColor(item.impact)}>
-                                <Icon name="TrendingUp" size="xs" className="mr-1" aria-hidden="true" />
+                                <Icon name="TrendingUp" size="xs" className="mr-1" aria-hidden={true} />
                                 Impact {item.impact === "low" ? "Faible" : item.impact === "medium" ? "Moyen" : "Élevé"}
                               </Badge>
                             </div>
@@ -564,10 +564,10 @@ export default function DevOpsChecklistPage() {
                   setCheckedItems([])
                 }}
               >
-                <Icon name="RefreshCw" size="sm" className="mr-2" aria-hidden="true" /> Réinitialiser
+                <Icon name="RefreshCw" size="sm" className="mr-2" aria-hidden={true} /> Réinitialiser
               </Button>
               <Button onClick={handleGeneratePDF}>
-                <Icon name="FileText" size="sm" className="mr-2" aria-hidden="true" /> Générer un rapport
+                <Icon name="FileText" size="sm" className="mr-2" aria-hidden={true} /> Générer un rapport
               </Button>
             </CardFooter>
           </Card>
@@ -628,7 +628,7 @@ export default function DevOpsChecklistPage() {
                   {getTotalScore() < 30 && (
                     <div className="p-4 bg-red-100 dark:bg-red-900/30 rounded-lg">
                       <h4 className="font-medium flex items-center gap-2 text-red-800 dark:text-red-300">
-                        <Icon name="AlertTriangle" size="sm" aria-hidden="true" /> Débutant
+                        <Icon name="AlertTriangle" size="sm" aria-hidden={true} /> Débutant
                       </h4>
                       <p className="text-sm text-red-700 dark:text-red-400 mt-1">
                         Vous êtes au début de votre parcours DevOps. Concentrez-vous sur les pratiques fondamentales
@@ -640,7 +640,7 @@ export default function DevOpsChecklistPage() {
                   {getTotalScore() >= 30 && getTotalScore() < 70 && (
                     <div className="p-4 bg-yellow-100 dark:bg-yellow-900/30 rounded-lg">
                       <h4 className="font-medium flex items-center gap-2 text-yellow-800 dark:text-yellow-300">
-                        <Icon name="AlertCircle" size="sm" aria-hidden="true" /> Intermédiaire
+                        <Icon name="AlertCircle" size="sm" aria-hidden={true} /> Intermédiaire
                       </h4>
                       <p className="text-sm text-yellow-700 dark:text-yellow-400 mt-1">
                         Vous avez mis en place plusieurs bonnes pratiques DevOps. Continuez à améliorer votre pipeline
@@ -652,7 +652,7 @@ export default function DevOpsChecklistPage() {
                   {getTotalScore() >= 70 && (
                     <div className="p-4 bg-green-100 dark:bg-green-900/30 rounded-lg">
                       <h4 className="font-medium flex items-center gap-2 text-green-800 dark:text-green-300">
-                        <Icon name="CheckCircle" size="sm" aria-hidden="true" /> Avancé
+                        <Icon name="CheckCircle" size="sm" aria-hidden={true} /> Avancé
                       </h4>
                       <p className="text-sm text-green-700 dark:text-green-400 mt-1">
                         Félicitations ! Vous avez atteint un niveau de maturité DevOps élevé. Concentrez-vous maintenant
@@ -716,7 +716,7 @@ export default function DevOpsChecklistPage() {
                       rel="noopener noreferrer"
                       className="text-primary hover:underline flex items-center gap-1.5"
                     >
-                      <Icon name="ExternalLink" size="xs" aria-hidden="true" /> The DevOps Checklist
+                      <Icon name="ExternalLink" size="xs" aria-hidden={true} /> The DevOps Checklist
                     </Link>
                   </li>
                   <li>
@@ -726,7 +726,7 @@ export default function DevOpsChecklistPage() {
                       rel="noopener noreferrer"
                       className="text-primary hover:underline flex items-center gap-1.5"
                     >
-                      <Icon name="ExternalLink" size="xs" aria-hidden="true" /> Google Cloud DevOps
+                      <Icon name="ExternalLink" size="xs" aria-hidden={true} /> Google Cloud DevOps
                     </Link>
                   </li>
                   <li>
@@ -736,7 +736,7 @@ export default function DevOpsChecklistPage() {
                       rel="noopener noreferrer"
                       className="text-primary hover:underline flex items-center gap-1.5"
                     >
-                      <Icon name="ExternalLink" size="xs" aria-hidden="true" /> Microsoft Azure DevOps
+                      <Icon name="ExternalLink" size="xs" aria-hidden={true} /> Microsoft Azure DevOps
                     </Link>
                   </li>
                 </ul>
@@ -747,18 +747,18 @@ export default function DevOpsChecklistPage() {
                 <ul className="space-y-1 text-sm">
                   <li>
                     <Link href="#" className="text-primary hover:underline flex items-center gap-1.5">
-                      <Icon name="BookOpen" size="xs" aria-hidden="true" /> The DevOps Handbook
+                      <Icon name="BookOpen" size="xs" aria-hidden={true} /> The DevOps Handbook
                     </Link>
                   </li>
                   <li>
                     <Link href="#" className="text-primary hover:underline flex items-center gap-1.5">
-                      <Icon name="BookOpen" size="xs" aria-hidden="true" /> Accelerate: Building and Scaling High
+                      <Icon name="BookOpen" size="xs" aria-hidden={true} /> Accelerate: Building and Scaling High
                       Performing Technology Organizations
                     </Link>
                   </li>
                   <li>
                     <Link href="#" className="text-primary hover:underline flex items-center gap-1.5">
-                      <Icon name="BookOpen" size="xs" aria-hidden="true" /> Site Reliability Engineering
+                      <Icon name="BookOpen" size="xs" aria-hidden={true} /> Site Reliability Engineering
                     </Link>
                   </li>
                 </ul>
@@ -767,7 +767,7 @@ export default function DevOpsChecklistPage() {
               <div className="pt-4">
                 <Button asChild className="w-full">
                   <Link href="/contact">
-                    <Icon name="Mail" size="sm" className="mr-2" aria-hidden="true" /> Demander une consultation
+                    <Icon name="Mail" size="sm" className="mr-2" aria-hidden={true} /> Demander une consultation
                   </Link>
                 </Button>
               </div>

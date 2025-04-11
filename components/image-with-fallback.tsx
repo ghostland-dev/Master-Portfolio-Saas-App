@@ -18,7 +18,7 @@ export default function ImageWithFallback({ src, fallbackSrc, alt, ...rest }: Im
   return (
     <>
       {isLoading && (
-        <div className="absolute inset-0 bg-slate-200 dark:bg-slate-800 animate-pulse rounded-md" aria-hidden="true" />
+        <div className="absolute inset-0 bg-slate-200 dark:bg-slate-800 animate-pulse rounded-md" aria-hidden={true} />
       )}
       <Image
         {...rest}

@@ -76,7 +76,7 @@ export default function SitemapPage() {
                     href={link.path}
                     className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
                   >
-                    <Icon name={link.icon as any} size="sm" aria-hidden="true" />
+                    <Icon name={link.icon as any} size="sm" aria-hidden={true} />
                     <span>{link.name}</span>
                   </Link>
                 </li>

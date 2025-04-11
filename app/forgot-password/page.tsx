@@ -73,7 +73,7 @@ export default function ForgotPasswordPage() {
                 <Button type="submit" className="w-full" disabled={loading}>
                   {loading ? (
                     <>
-                      <Icon name="Loader2" className="mr-2 h-4 w-4 animate-spin" aria-hidden="true" />
+                      <Icon name="Loader2" className="mr-2 h-4 w-4 animate-spin" aria-hidden={true} />
                       Envoi en cours...
                     </>
                   ) : (
@@ -96,7 +96,7 @@ export default function ForgotPasswordPage() {
               </Alert>
               <div className="flex justify-center pt-4">
                 <Button onClick={() => router.push("/login")}>
-                  <Icon name="ArrowLeft" className="mr-2 h-4 w-4" aria-hidden="true" />
+                  <Icon name="ArrowLeft" className="mr-2 h-4 w-4" aria-hidden={true} />
                   Retour à la page de connexion
                 </Button>
               </div>

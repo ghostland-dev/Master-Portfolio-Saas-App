@@ -38,27 +38,27 @@ export default function PricingPage() {
               <CardContent>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>Jusqu'à 40 heures de développement</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>1 réunion hebdomadaire</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>Support par email</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>1 environnement (développement)</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="X" className="h-5 w-5 text-muted-foreground mt-0.5" aria-hidden="true" />
+                    <Icon name="X" className="h-5 w-5 text-muted-foreground mt-0.5" aria-hidden={true} />
                     <span className="text-muted-foreground">CI/CD automatisé</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="X" className="h-5 w-5 text-muted-foreground mt-0.5" aria-hidden="true" />
+                    <Icon name="X" className="h-5 w-5 text-muted-foreground mt-0.5" aria-hidden={true} />
                     <span className="text-muted-foreground">Support prioritaire</span>
                   </li>
                 </ul>
@@ -85,27 +85,27 @@ export default function PricingPage() {
               <CardContent>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>Jusqu'à 80 heures de développement</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>2 réunions hebdomadaires</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>Support par email et téléphone</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>2 environnements (dev et production)</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>CI/CD automatisé</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="X" className="h-5 w-5 text-muted-foreground mt-0.5" aria-hidden="true" />
+                    <Icon name="X" className="h-5 w-5 text-muted-foreground mt-0.5" aria-hidden={true} />
                     <span className="text-muted-foreground">Support prioritaire</span>
                   </li>
                 </ul>
@@ -129,27 +129,27 @@ export default function PricingPage() {
               <CardContent>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>Jusqu'à 160 heures de développement</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>Réunions illimitées</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>Support complet (email, téléphone, chat)</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>3+ environnements (dev, staging, prod)</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>CI/CD automatisé avancé</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>Support prioritaire 24/7</span>
                   </li>
                 </ul>
@@ -180,27 +180,27 @@ export default function PricingPage() {
               <CardContent>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>Jusqu'à 40 heures de développement</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>1 réunion hebdomadaire</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>Support par email</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>1 environnement (développement)</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="X" className="h-5 w-5 text-muted-foreground mt-0.5" aria-hidden="true" />
+                    <Icon name="X" className="h-5 w-5 text-muted-foreground mt-0.5" aria-hidden={true} />
                     <span className="text-muted-foreground">CI/CD automatisé</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="X" className="h-5 w-5 text-muted-foreground mt-0.5" aria-hidden="true" />
+                    <Icon name="X" className="h-5 w-5 text-muted-foreground mt-0.5" aria-hidden={true} />
                     <span className="text-muted-foreground">Support prioritaire</span>
                   </li>
                 </ul>
@@ -230,27 +230,27 @@ export default function PricingPage() {
               <CardContent>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>Jusqu'à 80 heures de développement</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>2 réunions hebdomadaires</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>Support par email et téléphone</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>2 environnements (dev et production)</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>CI/CD automatisé</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="X" className="h-5 w-5 text-muted-foreground mt-0.5" aria-hidden="true" />
+                    <Icon name="X" className="h-5 w-5 text-muted-foreground mt-0.5" aria-hidden={true} />
                     <span className="text-muted-foreground">Support prioritaire</span>
                   </li>
                 </ul>
@@ -277,27 +277,27 @@ export default function PricingPage() {
               <CardContent>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>Jusqu'à 160 heures de développement</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>Réunions illimitées</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>Support complet (email, téléphone, chat)</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>3+ environnements (dev, staging, prod)</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>CI/CD automatisé avancé</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden="true" />
+                    <Icon name="Check" className="h-5 w-5 text-primary mt-0.5" aria-hidden={true} />
                     <span>Support prioritaire 24/7</span>
                   </li>
                 </ul>
@@ -453,7 +453,7 @@ export default function PricingPage() {
             </p>
             <Button asChild size="lg" className="mt-4">
               <Link href="/contact">
-                <Icon name="Mail" className="mr-2 h-4 w-4" aria-hidden="true" />
+                <Icon name="Mail" className="mr-2 h-4 w-4" aria-hidden={true} />
                 Demander un devis personnalisé
               </Link>
             </Button>

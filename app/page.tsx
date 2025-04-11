@@ -157,7 +157,7 @@ export default function Home() {
                 <Button asChild size="lg" className="relative overflow-hidden group">
                   <Link href="/appointment">
                     <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-primary/0 via-primary/30 to-primary/0 group-hover:animate-shimmer"></span>
-                    <Icon name="Calendar" size="sm" className="mr-2" aria-hidden="true" /> Prendre rendez-vous
+                    <Icon name="Calendar" size="sm" className="mr-2" aria-hidden={true} /> Prendre rendez-vous
                   </Link>
                 </Button>
                 <Button variant="outline" asChild size="lg" className="group">
@@ -167,7 +167,7 @@ export default function Home() {
                       name="ArrowRight"
                       size="sm"
                       className="ml-2 transition-transform duration-300 group-hover:translate-x-1"
-                      aria-hidden="true"
+                      aria-hidden={true}
                     />
                   </Link>
                 </Button>
@@ -239,7 +239,7 @@ export default function Home() {
                         size="xl"
                         variant="solid"
                         className="text-primary"
-                        aria-hidden="true"
+                        aria-hidden={true}
                       />
                     </div>
                     <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors duration-300">
@@ -260,7 +260,7 @@ export default function Home() {
                   name="ArrowRight"
                   size="sm"
                   className="ml-2 transition-transform duration-300 group-hover:translate-x-1"
-                  aria-hidden="true"
+                  aria-hidden={true}
                 />
               </Link>
             </Button>
@@ -307,7 +307,7 @@ export default function Home() {
                         size="sm"
                         variant="solid"
                         className="text-primary"
-                        aria-hidden="true"
+                        aria-hidden={true}
                       />
                       <h3 className="text-xl font-semibold group-hover:text-primary transition-colors duration-300">
                         {project.title}
@@ -333,7 +333,7 @@ export default function Home() {
                           name="ArrowRight"
                           size="sm"
                           className="ml-2 transition-transform duration-300 group-hover:translate-x-1"
-                          aria-hidden="true"
+                          aria-hidden={true}
                         />
                       </Link>
                     </Button>
@@ -351,7 +351,7 @@ export default function Home() {
                   name="ArrowRight"
                   size="sm"
                   className="ml-2 transition-transform duration-300 group-hover:translate-x-1"
-                  aria-hidden="true"
+                  aria-hidden={true}
                 />
               </Link>
             </Button>
@@ -412,7 +412,7 @@ export default function Home() {
                       name="ArrowRight"
                       size="sm"
                       className="ml-2 transition-transform duration-300 group-hover:translate-x-1"
-                      aria-hidden="true"
+                      aria-hidden={true}
                     />
                   </Link>
                 </Button>
@@ -475,7 +475,7 @@ export default function Home() {
                       name="ArrowRight"
                       size="sm"
                       className="ml-2 transition-transform duration-300 group-hover:translate-x-1"
-                      aria-hidden="true"
+                      aria-hidden={true}
                     />
                   </Link>
                 </Button>
@@ -508,12 +508,12 @@ export default function Home() {
               <Button asChild size="lg" className="relative overflow-hidden group">
                 <Link href="/appointment">
                   <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-primary/0 via-primary/30 to-primary/0 group-hover:animate-shimmer"></span>
-                  <Icon name="Calendar" size="sm" className="mr-2" aria-hidden="true" /> Prendre rendez-vous
+                  <Icon name="Calendar" size="sm" className="mr-2" aria-hidden={true} /> Prendre rendez-vous
                 </Link>
               </Button>
               <Button variant="outline" asChild size="lg" className="group">
                 <Link href="/contact">
-                  <Icon name="Mail" size="sm" className="mr-2" aria-hidden="true" /> Contactez-moi
+                  <Icon name="Mail" size="sm" className="mr-2" aria-hidden={true} /> Contactez-moi
                 </Link>
               </Button>
             </div>
@@ -568,7 +568,7 @@ export default function Home() {
                 <Card className="h-full border border-border/50 hover:border-primary/50 transition-all duration-300">
                   <CardContent className="p-6 flex flex-col h-full">
                     <div className="flex-grow">
-                      <Icon name="Quote" className="h-8 w-8 text-primary/40 mb-4" aria-hidden="true" />
+                      <Icon name="Quote" className="h-8 w-8 text-primary/40 mb-4" aria-hidden={true} />
                       <p className="text-muted-foreground italic mb-6">{testimonial.content}</p>
                     </div>
                     <div className="flex items-center gap-4">
@@ -599,7 +599,7 @@ export default function Home() {
                   name="ArrowRight"
                   size="sm"
                   className="ml-2 transition-transform duration-300 group-hover:translate-x-1"
-                  aria-hidden="true"
+                  aria-hidden={true}
                 />
               </Link>
             </Button>

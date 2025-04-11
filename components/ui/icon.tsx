@@ -48,7 +48,7 @@ export function Icon({
     return (
       <LucideIcons.HelpCircle
         className={cn(sizeClasses[size], variantClasses[variant], className)}
-        aria-hidden="true"
+        aria-hidden={true}
         {...props}
       />
     )
@@ -89,7 +89,7 @@ export function IconText({
 }: IconTextProps) {
   return (
     <div className={cn("flex items-center gap-2", className)}>
-      <Icon name={name} size={size} variant={variant} className={iconClassName} aria-hidden="true" />
+      <Icon name={name} size={size} variant={variant} className={iconClassName} aria-hidden={true} />
       <span className={cn("text-sm", textClassName)}>{text}</span>
     </div>
   )

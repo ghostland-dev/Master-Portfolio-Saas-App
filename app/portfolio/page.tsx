@@ -73,16 +73,16 @@ export default function PortfolioPage() {
         <div className="flex justify-center mb-8">
           <TabsList>
             <TabsTrigger value="all" className="flex items-center gap-1.5">
-              <Icon name="Grid" size="sm" aria-hidden="true" /> Tous
+              <Icon name="Grid" size="sm" aria-hidden={true} /> Tous
             </TabsTrigger>
             <TabsTrigger value="web" className="flex items-center gap-1.5">
-              <Icon name="Globe" size="sm" aria-hidden="true" /> Web
+              <Icon name="Globe" size="sm" aria-hidden={true} /> Web
             </TabsTrigger>
             <TabsTrigger value="mobile" className="flex items-center gap-1.5">
-              <Icon name="Smartphone" size="sm" aria-hidden="true" /> Mobile
+              <Icon name="Smartphone" size="sm" aria-hidden={true} /> Mobile
             </TabsTrigger>
             <TabsTrigger value="devops" className="flex items-center gap-1.5">
-              <Icon name="Server" size="sm" aria-hidden="true" /> DevOps
+              <Icon name="Server" size="sm" aria-hidden={true} /> DevOps
             </TabsTrigger>
           </TabsList>
         </div>
@@ -137,7 +137,7 @@ function ProjectCard({ project }) {
       <div className="relative h-64 w-full">
         <div className="absolute top-4 right-4 z-10">
           <Badge className="flex items-center gap-1.5 bg-background/80 backdrop-blur-sm">
-            <Icon name={categoryIcon} size="xs" aria-hidden="true" />
+            <Icon name={categoryIcon} size="xs" aria-hidden={true} />
             {project.category}
           </Badge>
         </div>
@@ -150,7 +150,7 @@ function ProjectCard({ project }) {
       </div>
       <CardContent className="p-6">
         <div className="flex items-center gap-2 mb-2">
-          <Icon name={categoryIcon} size="sm" variant="solid" aria-hidden="true" />
+          <Icon name={categoryIcon} size="sm" variant="solid" aria-hidden={true} />
           <h3 className="text-xl font-semibold">{project.title}</h3>
         </div>
         <p className="text-muted-foreground mb-4">{project.description}</p>
@@ -163,7 +163,7 @@ function ProjectCard({ project }) {
         </div>
         <Button variant="outline" size="sm" asChild>
           <Link href={`/portfolio/project-${project.id}`}>
-            Voir le projet <Icon name="ArrowRight" size="sm" className="ml-2" aria-hidden="true" />
+            Voir le projet <Icon name="ArrowRight" size="sm" className="ml-2" aria-hidden={true} />
           </Link>
         </Button>
       </CardContent>

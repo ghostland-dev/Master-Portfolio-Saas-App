@@ -122,7 +122,7 @@ export default function DashboardPage() {
   if (isLoading || !dataLoaded) {
     return (
       <div className="container mx-auto px-4 py-12 flex flex-col items-center justify-center min-h-[50vh]">
-        <Icon name="Loader2" className="h-12 w-12 animate-spin text-primary mb-4" aria-hidden="true" />
+        <Icon name="Loader2" className="h-12 w-12 animate-spin text-primary mb-4" aria-hidden={true} />
         <p className="text-lg">Chargement de votre tableau de bord...</p>
       </div>
     )
@@ -297,7 +297,7 @@ export default function DashboardPage() {
                 <h3 className="text-2xl font-bold mt-1">{stats.activeProjects}</h3>
               </div>
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center">
-                <Icon name="Briefcase" className="h-6 w-6 text-primary" aria-hidden="true" />
+                <Icon name="Briefcase" className="h-6 w-6 text-primary" aria-hidden={true} />
               </div>
             </div>
           </CardContent>
@@ -311,7 +311,7 @@ export default function DashboardPage() {
                 <h3 className="text-2xl font-bold mt-1">{stats.completedProjects}</h3>
               </div>
               <div className="h-12 w-12 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
-                <Icon name="CheckCircle" className="h-6 w-6 text-green-600 dark:text-green-400" aria-hidden="true" />
+                <Icon name="CheckCircle" className="h-6 w-6 text-green-600 dark:text-green-400" aria-hidden={true} />
               </div>
             </div>
           </CardContent>
@@ -325,7 +325,7 @@ export default function DashboardPage() {
                 <h3 className="text-2xl font-bold mt-1">{stats.unreadMessages}</h3>
               </div>
               <div className="h-12 w-12 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
-                <Icon name="Mail" className="h-6 w-6 text-blue-600 dark:text-blue-400" aria-hidden="true" />
+                <Icon name="Mail" className="h-6 w-6 text-blue-600 dark:text-blue-400" aria-hidden={true} />
               </div>
             </div>
           </CardContent>
@@ -339,7 +339,7 @@ export default function DashboardPage() {
                 <h3 className="text-2xl font-bold mt-1">{stats.totalRevenue.toLocaleString()}</h3>
               </div>
               <div className="h-12 w-12 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center">
-                <Icon name="DollarSign" className="h-6 w-6 text-purple-600 dark:text-purple-400" aria-hidden="true" />
+                <Icon name="DollarSign" className="h-6 w-6 text-purple-600 dark:text-purple-400" aria-hidden={true} />
               </div>
             </div>
           </CardContent>
@@ -349,19 +349,19 @@ export default function DashboardPage() {
       <Tabs defaultValue="projects" className="space-y-8">
         <TabsList className="grid grid-cols-2 md:grid-cols-4 w-full md:w-auto">
           <TabsTrigger value="projects" className="flex items-center gap-1.5">
-            <Icon name="Briefcase" size="sm" aria-hidden="true" /> Projets
+            <Icon name="Briefcase" size="sm" aria-hidden={true} /> Projets
           </TabsTrigger>
           <TabsTrigger value="messages" className="flex items-center gap-1.5">
-            <Icon name="Mail" size="sm" aria-hidden="true" /> Messages
+            <Icon name="Mail" size="sm" aria-hidden={true} /> Messages
             {stats.unreadMessages > 0 && (
               <Badge className="ml-1 bg-primary text-primary-foreground">{stats.unreadMessages}</Badge>
             )}
           </TabsTrigger>
           <TabsTrigger value="feedback" className="flex items-center gap-1.5">
-            <Icon name="MessageSquare" size="sm" aria-hidden="true" /> Retours Clients
+            <Icon name="MessageSquare" size="sm" aria-hidden={true} /> Retours Clients
           </TabsTrigger>
           <TabsTrigger value="invoices" className="flex items-center gap-1.5">
-            <Icon name="Receipt" size="sm" aria-hidden="true" /> Factures
+            <Icon name="Receipt" size="sm" aria-hidden={true} /> Factures
           </TabsTrigger>
         </TabsList>
 
@@ -394,12 +394,12 @@ export default function DashboardPage() {
                               <div className="flex items-center gap-2">
                                 <Button variant="outline" size="sm" asChild>
                                   <Link href={`/dashboard/projects/${project.id}`}>
-                                    <Icon name="Eye" size="sm" className="mr-1" aria-hidden="true" /> Détails
+                                    <Icon name="Eye" size="sm" className="mr-1" aria-hidden={true} /> Détails
                                   </Link>
                                 </Button>
                                 <Button size="sm" asChild>
                                   <Link href={`/dashboard/projects/${project.id}/edit`}>
-                                    <Icon name="PenLine" size="sm" className="mr-1" aria-hidden="true" /> Modifier
+                                    <Icon name="PenLine" size="sm" className="mr-1" aria-hidden={true} /> Modifier
                                   </Link>
                                 </Button>
                               </div>
@@ -430,7 +430,7 @@ export default function DashboardPage() {
                         ))
                     ) : (
                       <div className="text-center py-8">
-                        <Icon name="Search" className="h-8 w-8 text-muted-foreground mx-auto mb-2" aria-hidden="true" />
+                        <Icon name="Search" className="h-8 w-8 text-muted-foreground mx-auto mb-2" aria-hidden={true} />
                         <p className="text-muted-foreground">Aucun projet trouvé</p>
                       </div>
                     )}
@@ -439,7 +439,7 @@ export default function DashboardPage() {
                 <CardFooter>
                   <Button asChild>
                     <Link href="/dashboard/projects/new">
-                      <Icon name="Plus" size="sm" className="mr-2" aria-hidden="true" /> Nouveau Projet
+                      <Icon name="Plus" size="sm" className="mr-2" aria-hidden={true} /> Nouveau Projet
                     </Link>
                   </Button>
                 </CardFooter>
@@ -498,7 +498,7 @@ export default function DashboardPage() {
                   <CardFooter>
                     <Button variant="outline" asChild className="w-full">
                       <Link href="/dashboard/clients">
-                        <Icon name="Users" size="sm" className="mr-2" aria-hidden="true" /> Voir tous les clients
+                        <Icon name="Users" size="sm" className="mr-2" aria-hidden={true} /> Voir tous les clients
                       </Link>
                     </Button>
                   </CardFooter>
@@ -566,17 +566,17 @@ export default function DashboardPage() {
                       <p className="text-muted-foreground mt-2">{message.content}</p>
                       <div className="flex justify-end mt-4 gap-2">
                         <Button variant="outline" size="sm">
-                          <Icon name="MailCheck" size="sm" className="mr-1" aria-hidden="true" /> Marquer comme lu
+                          <Icon name="MailCheck" size="sm" className="mr-1" aria-hidden={true} /> Marquer comme lu
                         </Button>
                         <Button size="sm">
-                          <Icon name="Reply" size="sm" className="mr-1" aria-hidden="true" /> Répondre
+                          <Icon name="Reply" size="sm" className="mr-1" aria-hidden={true} /> Répondre
                         </Button>
                       </div>
                     </div>
                   ))
                 ) : (
                   <div className="text-center py-8">
-                    <Icon name="Search" className="h-8 w-8 text-muted-foreground mx-auto mb-2" aria-hidden="true" />
+                    <Icon name="Search" className="h-8 w-8 text-muted-foreground mx-auto mb-2" aria-hidden={true} />
                     <p className="text-muted-foreground">Aucun message trouvé</p>
                   </div>
                 )}
@@ -585,7 +585,7 @@ export default function DashboardPage() {
             <CardFooter>
               <Button asChild>
                 <Link href="/dashboard/messages/compose">
-                  <Icon name="PenLine" size="sm" className="mr-2" aria-hidden="true" /> Nouveau Message
+                  <Icon name="PenLine" size="sm" className="mr-2" aria-hidden={true} /> Nouveau Message
                 </Link>
               </Button>
             </CardFooter>
@@ -629,7 +629,7 @@ export default function DashboardPage() {
                                 className={`h-4 w-4 ${
                                   i < feedback.rating ? "text-yellow-400" : "text-muted-foreground/30"
                                 }`}
-                                aria-hidden="true"
+                                aria-hidden={true}
                               />
                             ))}
                           </div>
@@ -662,17 +662,17 @@ export default function DashboardPage() {
                       <div className="flex justify-end mt-4 gap-2">
                         {isAdmin && !feedback.public && (
                           <Button variant="outline" size="sm">
-                            <Icon name="Globe" size="sm" className="mr-1" aria-hidden="true" /> Rendre public
+                            <Icon name="Globe" size="sm" className="mr-1" aria-hidden={true} /> Rendre public
                           </Button>
                         )}
                         {isAdmin && (
                           <Button size="sm">
-                            <Icon name="ThumbsUp" size="sm" className="mr-1" aria-hidden="true" /> Remercier
+                            <Icon name="ThumbsUp" size="sm" className="mr-1" aria-hidden={true} /> Remercier
                           </Button>
                         )}
                         {!isAdmin && (
                           <Button variant="outline" size="sm">
-                            <Icon name="PenLine" size="sm" className="mr-1" aria-hidden="true" /> Modifier
+                            <Icon name="PenLine" size="sm" className="mr-1" aria-hidden={true} /> Modifier
                           </Button>
                         )}
                       </div>
@@ -683,7 +683,7 @@ export default function DashboardPage() {
                     <Icon
                       name="MessageSquare"
                       className="h-8 w-8 text-muted-foreground mx-auto mb-2"
-                      aria-hidden="true"
+                      aria-hidden={true}
                     />
                     <p className="text-muted-foreground">Aucun retour client pour le moment</p>
                   </div>
@@ -694,13 +694,13 @@ export default function DashboardPage() {
               {isAdmin ? (
                 <Button asChild>
                   <Link href="/dashboard/feedback/request">
-                    <Icon name="MessageSquare" size="sm" className="mr-2" aria-hidden="true" /> Demander un avis
+                    <Icon name="MessageSquare" size="sm" className="mr-2" aria-hidden={true} /> Demander un avis
                   </Link>
                 </Button>
               ) : (
                 <Button asChild>
                   <Link href="/dashboard/feedback/new">
-                    <Icon name="PenLine" size="sm" className="mr-2" aria-hidden="true" /> Laisser un avis
+                    <Icon name="PenLine" size="sm" className="mr-2" aria-hidden={true} /> Laisser un avis
                   </Link>
                 </Button>
               )}
@@ -743,14 +743,14 @@ export default function DashboardPage() {
                             <td className="py-3 px-2">
                               <div className="flex items-center gap-2">
                                 <Button variant="ghost" size="icon">
-                                  <Icon name="Eye" size="sm" aria-hidden="true" />
+                                  <Icon name="Eye" size="sm" aria-hidden={true} />
                                 </Button>
                                 <Button variant="ghost" size="icon">
-                                  <Icon name="Download" size="sm" aria-hidden="true" />
+                                  <Icon name="Download" size="sm" aria-hidden={true} />
                                 </Button>
                                 {isAdmin && (
                                   <Button variant="ghost" size="icon">
-                                    <Icon name="PenLine" size="sm" aria-hidden="true" />
+                                    <Icon name="PenLine" size="sm" aria-hidden={true} />
                                   </Button>
                                 )}
                               </div>
@@ -765,7 +765,7 @@ export default function DashboardPage() {
                   <CardFooter>
                     <Button asChild>
                       <Link href="/dashboard/invoices/new">
-                        <Icon name="FilePlus" size="sm" className="mr-2" aria-hidden="true" /> Nouvelle Facture
+                        <Icon name="FilePlus" size="sm" className="mr-2" aria-hidden={true} /> Nouvelle Facture
                       </Link>
                     </Button>
                   </CardFooter>
@@ -823,17 +823,17 @@ export default function DashboardPage() {
                     <div className="space-y-2">
                       <Button variant="outline" className="w-full justify-start" asChild>
                         <Link href="/dashboard/invoices/new">
-                          <Icon name="FilePlus" size="sm" className="mr-2" aria-hidden="true" /> Créer une facture
+                          <Icon name="FilePlus" size="sm" className="mr-2" aria-hidden={true} /> Créer une facture
                         </Link>
                       </Button>
                       <Button variant="outline" className="w-full justify-start" asChild>
                         <Link href="/dashboard/reports/financial">
-                          <Icon name="BarChart" size="sm" className="mr-2" aria-hidden="true" /> Rapport financier
+                          <Icon name="BarChart" size="sm" className="mr-2" aria-hidden={true} /> Rapport financier
                         </Link>
                       </Button>
                       <Button variant="outline" className="w-full justify-start" asChild>
                         <Link href="/dashboard/invoices/reminders">
-                          <Icon name="Bell" size="sm" className="mr-2" aria-hidden="true" /> Envoyer des rappels
+                          <Icon name="Bell" size="sm" className="mr-2" aria-hidden={true} /> Envoyer des rappels
                         </Link>
                       </Button>
                     </div>
