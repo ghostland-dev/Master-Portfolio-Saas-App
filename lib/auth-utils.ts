@@ -1,6 +1,6 @@
 // Types pour l'authentification
 export interface User {
-  id: string
+  id: number
   email: string
   name: string
   role: "admin" | "client"
@@ -12,7 +12,7 @@ export interface User {
 // Utilisateurs simulés pour la démonstration
 export const users: User[] = [
   {
-    id: "admin1",
+    id: 1,
     email: "ismail@mouyahada.fr",
     name: "Ismail MOUYAHADA",
     role: "admin",
@@ -20,7 +20,7 @@ export const users: User[] = [
     phone: "+33 6 12 34 56 78",
   },
   {
-    id: "client1",
+    id: 1,
     email: "marie.dupont@retailtech.com",
     name: "Marie Dupont",
     role: "client",
@@ -29,7 +29,7 @@ export const users: User[] = [
     phone: "+33 6 12 34 56 78",
   },
   {
-    id: "client2",
+    id: 1,
     email: "jean.martin@globalservices.com",
     name: "Jean Martin",
     role: "client",
@@ -38,7 +38,7 @@ export const users: User[] = [
     phone: "+33 6 23 45 67 89",
   },
   {
-    id: "client3",
+    id: 1,
     email: "sophie.legrand@techstart.fr",
     name: "Sophie Legrand",
     role: "client",
@@ -47,7 +47,7 @@ export const users: User[] = [
     phone: "+33 6 34 56 78 90",
   },
   {
-    id: "client4",
+    id: 1,
     email: "thomas.bernard@innovatecorp.com",
     name: "Thomas Bernard",
     role: "client",
@@ -56,7 +56,7 @@ export const users: User[] = [
     phone: "+33 6 45 67 89 01",
   },
   {
-    id: "client5",
+    id: 1,
     email: "camille.petit@digitalwave.fr",
     name: "Camille Petit",
     role: "client",
@@ -71,32 +71,42 @@ const USER_STORAGE_KEY = "portfolio_auth_user"
 
 // Fonction pour simuler la connexion
 export const login = (email: string, password: string): User | null => {
-  // Dans un environnement réel, vous vérifieriez le mot de passe avec un hash
-  // Pour cette démo, nous acceptons n'importe quel mot de passe
-  const user = users.find((u) => u.email.toLowerCase() === email.toLowerCase())
+  // Chercher l'utilisateur par email (insensible à la casse)
+  const user = users.find((u) => u.email.toLowerCase() === email.toLowerCase());
 
-  if (user) {
-    // Stocker l'utilisateur dans le localStorage
-    try {
-      const userJson = JSON.stringify(user)
-      localStorage.setItem(USER_STORAGE_KEY, userJson)
-
-      // Vérifier que les données ont été correctement stockées
-      const storedData = localStorage.getItem(USER_STORAGE_KEY)
-      if (!storedData || storedData !== userJson) {
-        console.error("Échec du stockage des données utilisateur")
-        return null
-      }
-
-      console.log("Utilisateur connecté avec succès:", user.email)
-    } catch (error) {
-      console.error("Erreur lors du stockage des données utilisateur:", error)
-      return null
-    }
+  // Si l'utilisateur n'existe pas, renvoyer null
+  if (!user) {
+    console.error("Utilisateur non trouvé");
+    return null;
   }
 
-  return user
-}
+  // Dans un environnement réel, vous vérifieriez le mot de passe avec un hash
+  // Pour cette démo, nous acceptons n'importe quel mot de passe
+  // Vérification de la correspondance du mot de passe (si applicable)
+  // if (user.password !== password) {
+  //   console.error("Mot de passe incorrect");
+  //   return null;
+  // }
+
+  // Stocker l'utilisateur dans le localStorage
+  try {
+    const userJson = JSON.stringify(user);
+    localStorage.setItem(USER_STORAGE_KEY, userJson);
+
+    // Vérifier que les données ont été correctement stockées
+    const storedData = localStorage.getItem(USER_STORAGE_KEY);
+    if (!storedData || storedData !== userJson) {
+      console.error("Échec du stockage des données utilisateur");
+      return null;
+    }
+
+    console.log("Utilisateur connecté avec succès:", user.email);
+    return user; // Retourner l'utilisateur si la connexion a réussi
+  } catch (error) {
+    console.error("Erreur lors du stockage des données utilisateur:", error);
+    return null;
+  }
+};
 
 // Fonction pour vérifier si l'utilisateur est connecté
 export const isAuthenticated = (): boolean => {
@@ -213,31 +223,31 @@ export const isClient = (): boolean => {
 }
 
 // Fonction pour obtenir les projets associés à un client
-export const getClientProjects = (clientId: string) => {
+export const getClientProjects = (clientId: number) => {
   return projects.filter((project) => project.clientId === clientId)
 }
 
 // Fonction pour obtenir les messages associés à un client
-export const getClientMessages = (clientId: string) => {
+export const getClientMessages = (clientId: number) => {
   return messages.filter((message) => message.clientId === clientId)
 }
 
 // Fonction pour obtenir les factures associées à un client
-export const getClientInvoices = (clientId: string) => {
+export const getClientInvoices = (clientId: number) => {
   return invoices.filter((invoice) => invoice.clientId === clientId)
 }
 
 // Fonction pour obtenir les retours associés à un client
-export const getClientFeedbacks = (clientId: string) => {
+export const getClientFeedbacks = (clientId: number) => {
   return feedbacks.filter((feedback) => feedback.clientId === clientId)
 }
 
 // Types pour les données
 interface Project {
-  id: string
+  id: number
   title: string
   description: string
-  clientId: string
+  clientId: number
   status: "proposal" | "active" | "review" | "completed" | "on-hold"
   progress: number
   startDate: string
@@ -247,8 +257,8 @@ interface Project {
 }
 
 interface Message {
-  id: string
-  clientId: string
+  id: number
+  clientId: number
   date: string
   subject: string
   content: string
@@ -258,9 +268,9 @@ interface Message {
 }
 
 interface Feedback {
-  id: string
-  clientId: string
-  projectId: string
+  id: number
+  clientId: number
+  projectId: number
   projectTitle: string
   rating: number
   comment: string
@@ -269,9 +279,9 @@ interface Feedback {
 }
 
 interface Invoice {
-  id: string
-  clientId: string
-  projectId: string
+  id: number
+  clientId: number
+  projectId: number
   projectTitle: string
   amount: number
   date: string
@@ -282,10 +292,10 @@ interface Invoice {
 // Données simulées
 export const projects: Project[] = [
   {
-    id: "project1",
+    id: 1,
     title: "E-commerce Platform",
     description: "Développement d'une plateforme e-commerce complète avec panier, paiement et gestion des commandes.",
-    clientId: "client1",
+    clientId: 1,
     status: "active",
     progress: 65,
     startDate: "2023-03-15",
@@ -294,10 +304,10 @@ export const projects: Project[] = [
     type: "web",
   },
   {
-    id: "project2",
+    id: 1,
     title: "CRM Dashboard",
     description: "Tableau de bord CRM pour la gestion des clients et des ventes.",
-    clientId: "client2",
+    clientId: 1,
     status: "review",
     progress: 90,
     startDate: "2023-01-10",
@@ -306,10 +316,10 @@ export const projects: Project[] = [
     type: "web",
   },
   {
-    id: "project3",
+    id: 1,
     title: "DevOps Pipeline",
     description: "Mise en place d'un pipeline CI/CD pour le déploiement automatisé d'applications.",
-    clientId: "client3",
+    clientId: 1,
     status: "completed",
     progress: 100,
     startDate: "2022-11-05",
@@ -318,10 +328,10 @@ export const projects: Project[] = [
     type: "devops",
   },
   {
-    id: "project4",
+    id: 1,
     title: "Mobile Banking App",
     description: "Application mobile de services bancaires avec authentification sécurisée.",
-    clientId: "client4",
+    clientId: 1,
     status: "proposal",
     progress: 0,
     startDate: "2023-06-01",
@@ -330,10 +340,10 @@ export const projects: Project[] = [
     type: "mobile",
   },
   {
-    id: "project5",
+    id: 1,
     title: "Data Analytics Platform",
     description: "Plateforme d'analyse de données en temps réel pour le suivi des performances.",
-    clientId: "client5",
+    clientId: 1,
     status: "on-hold",
     progress: 40,
     startDate: "2023-02-15",
@@ -345,8 +355,8 @@ export const projects: Project[] = [
 
 export const messages: Message[] = [
   {
-    id: "msg1",
-    clientId: "client1",
+    id: 1,   
+    clientId: 1,
     date: "2023-05-18T14:30:00",
     subject: "Question sur la fonctionnalité de panier",
     content:
@@ -356,8 +366,8 @@ export const messages: Message[] = [
     fromClient: true,
   },
   {
-    id: "msg2",
-    clientId: "client2",
+    id: 1,   
+    clientId: 1,
     date: "2023-05-17T09:15:00",
     subject: "Validation des maquettes",
     content:
@@ -367,8 +377,8 @@ export const messages: Message[] = [
     fromClient: true,
   },
   {
-    id: "msg3",
-    clientId: "client3",
+    id: 1,   
+    clientId: 1,
     date: "2023-05-16T16:45:00",
     subject: "Problème avec le déploiement",
     content:
@@ -378,8 +388,8 @@ export const messages: Message[] = [
     fromClient: true,
   },
   {
-    id: "msg4",
-    clientId: "client4",
+    id: 1,   
+    clientId: 1,
     date: "2023-05-15T11:20:00",
     subject: "Demande de devis pour phase 2",
     content:
@@ -389,8 +399,8 @@ export const messages: Message[] = [
     fromClient: true,
   },
   {
-    id: "msg5",
-    clientId: "client5",
+    id: 1,   
+    clientId: 1,
     date: "2023-05-14T15:10:00",
     subject: "Report de la réunion",
     content:
@@ -400,8 +410,8 @@ export const messages: Message[] = [
     fromClient: true,
   },
   {
-    id: "msg6",
-    clientId: "client1",
+    id: 1,   
+    clientId: 1,
     date: "2023-05-13T10:30:00",
     subject: "Réponse: Question sur la fonctionnalité de panier",
     content:
@@ -414,9 +424,9 @@ export const messages: Message[] = [
 
 export const feedbacks: Feedback[] = [
   {
-    id: "feedback1",
-    clientId: "client3",
-    projectId: "project3",
+    id: 11,
+    clientId: 1,
+    projectId: 1,
     projectTitle: "DevOps Pipeline",
     rating: 5,
     comment:
@@ -425,9 +435,9 @@ export const feedbacks: Feedback[] = [
     public: true,
   },
   {
-    id: "feedback2",
-    clientId: "client1",
-    projectId: "project1",
+    id: 12,
+    clientId: 1,
+    projectId: 1,
     projectTitle: "E-commerce Platform",
     rating: 4,
     comment:
@@ -436,9 +446,9 @@ export const feedbacks: Feedback[] = [
     public: false,
   },
   {
-    id: "feedback3",
-    clientId: "client2",
-    projectId: "project2",
+    id: 13,
+    clientId: 1,
+    projectId: 1,
     projectTitle: "CRM Dashboard",
     rating: 5,
     comment:
@@ -450,9 +460,9 @@ export const feedbacks: Feedback[] = [
 
 export const invoices: Invoice[] = [
   {
-    id: "inv001",
-    clientId: "client1",
-    projectId: "project1",
+    id: 1,
+    clientId: 1,
+    projectId: 1,
     projectTitle: "E-commerce Platform",
     amount: 10000,
     date: "2023-03-15",
@@ -460,9 +470,9 @@ export const invoices: Invoice[] = [
     status: "paid",
   },
   {
-    id: "inv002",
-    clientId: "client1",
-    projectId: "project1",
+    id: 1,
+    clientId: 1,
+    projectId: 1,
     projectTitle: "E-commerce Platform",
     amount: 7500,
     date: "2023-05-01",
@@ -470,9 +480,9 @@ export const invoices: Invoice[] = [
     status: "sent",
   },
   {
-    id: "inv003",
-    clientId: "client2",
-    projectId: "project2",
+    id: 1,
+    clientId: 1,
+    projectId: 1,
     projectTitle: "CRM Dashboard",
     amount: 9000,
     date: "2023-01-10",
@@ -480,9 +490,9 @@ export const invoices: Invoice[] = [
     status: "paid",
   },
   {
-    id: "inv004",
-    clientId: "client2",
-    projectId: "project2",
+    id: 1,
+    clientId: 1,
+    projectId: 1,
     projectTitle: "CRM Dashboard",
     amount: 9000,
     date: "2023-03-15",
@@ -490,9 +500,9 @@ export const invoices: Invoice[] = [
     status: "paid",
   },
   {
-    id: "inv005",
-    clientId: "client3",
-    projectId: "project3",
+    id: 1,
+    clientId: 1,
+    projectId: 1,
     projectTitle: "DevOps Pipeline",
     amount: 15000,
     date: "2022-11-05",
@@ -500,9 +510,9 @@ export const invoices: Invoice[] = [
     status: "paid",
   },
   {
-    id: "inv006",
-    clientId: "client5",
-    projectId: "project5",
+    id: 1,
+    clientId: 1,
+    projectId: 1,
     projectTitle: "Data Analytics Platform",
     amount: 14000,
     date: "2023-02-15",

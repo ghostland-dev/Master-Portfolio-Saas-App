@@ -65,7 +65,7 @@ export const generatePDF = async (
     const imgHeight = (canvas.height * imgWidth) / canvas.width
 
     // Créer le PDF
-    const pdf = new jsPDF({
+    const pdf : any = new jsPDF({
       orientation: orientation,
       unit: "mm",
       format: format,
@@ -152,7 +152,7 @@ export const generateStructuredPDF = (
     const { format = "a4", orientation = "portrait", logo, watermark } = options
 
     // Créer le PDF
-    const pdf = new jsPDF({
+    const pdf : any = new jsPDF({
       orientation: orientation,
       unit: "mm",
       format: format,

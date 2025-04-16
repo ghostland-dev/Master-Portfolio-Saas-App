@@ -20,7 +20,7 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold mb-6">Ismail MOUYAHADA</h2>
           <p className="text-lg">
             Je suis un développeur full-stack et DevOps passionné par la création de solutions logicielles innovantes et
-            performantes. Avec plus de 10 ans d'expérience dans le développement web et mobile, j'ai eu l'opportunité de
+            performantes. Avec plus de 6 ans d'expérience dans le développement web et mobile, j'ai eu l'opportunité de
             travailler sur une grande variété de projets, des startups aux grandes entreprises.
           </p>
           <p className="text-lg">

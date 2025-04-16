@@ -645,7 +645,7 @@ export default function BudgetSimulatorPage() {
                       id="customFeatures"
                       placeholder="Décrivez vos besoins spécifiques ici..."
                       value={customFeatures}
-                      onChange={(e) => setCustomFeatures(e.target.value)}
+                      onChange={(e: { target: { value: React.SetStateAction<string> } }) => setCustomFeatures(e.target.value)}
                       rows={3}
                     />
                   </div>
@@ -1083,7 +1083,7 @@ export default function BudgetSimulatorPage() {
 }
 
 // Textarea component
-function Textarea({ id, placeholder, value, onChange, rows = 3 }) {
+function Textarea({ id, placeholder, value, onChange, rows = 3 }:any) {
   return (
     <textarea
       id={id}

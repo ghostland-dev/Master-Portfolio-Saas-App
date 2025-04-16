@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { AwaitedReactNode, JSXElementConstructor, Key, ReactElement, ReactNode, ReactPortal, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -10,7 +10,7 @@ import Image from "next/image"
 
 // Simulated project data - in a real app, this would come from an API or database
 const getProjectData = (id: string) => {
-  const projects = {
+  const projects : any = {
     "project-1": {
       id: "project-1",
       title: "E-commerce Platform",
@@ -129,7 +129,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
             <h1 className="text-3xl md:text-4xl font-bold">{project.title}</h1>
           </div>
           <div className="flex flex-wrap gap-2 mb-6">
-            {project.technologies.map((tech, index) => (
+            {project.technologies.map((tech: string | number | bigint | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<AwaitedReactNode> | null | undefined, index: Key | null | undefined) => (
               <Badge key={index} variant="secondary">
                 {tech}
               </Badge>
@@ -175,7 +175,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
           />
         </div>
         <div className="grid grid-cols-4 gap-4">
-          {project.images.map((image, index) => (
+          {project.images.map((image: any, index: any | number | bigint | ((prevState: number) => number) | null | undefined) => (
             <div
               key={index}
               className={`relative aspect-video rounded-md overflow-hidden cursor-pointer border-2 ${index === activeImageIndex ? "border-primary" : "border-transparent"}`}

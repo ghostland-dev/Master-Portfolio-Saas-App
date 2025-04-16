@@ -1,0 +1,74 @@
+
+services:
+  # Next.js Frontend
+  portfolio-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: portfolio-frontend
+    env_file:
+      - .env  # Make sure this .env file exists in the root of your project
+    ports:
+      - "3000:3000"
+    depends_on:
+      - portfolio-backend
+    networks:
+      - app-network
+
+  # Directus Backend
+  portfolio-backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.directus
+    container_name: portfolio-backend
+    ports:
+      - "8055:8055"
+    environment:
+      - DIRECTUS_DB_CLIENT=pg
+      - DIRECTUS_DB_HOST=portfolio-db
+      - DIRECTUS_DB_PORT=5432
+      - DIRECTUS_DB_DATABASE=directus
+      - DIRECTUS_DB_USER=root
+      - DIRECTUS_DB_PASSWORD=root
+    depends_on:
+      - portfolio-db
+    networks:
+      - app-network
+  # Directus 
+  directus:
+      image: directus/directus:latest
+      ports:
+          - 8055:8055
+      volumes:
+          - ./database:/directus/database
+          - ./uploads:/directus/uploads
+          - ./extensions:/directus/extensions
+      environment:
+          SECRET: "replace-with-random-value"
+          ADMIN_EMAIL: "admin@example.com"
+          ADMIN_PASSWORD: "d1r3ctu5"
+          DB_CLIENT: "sqlite3"
+          DB_FILENAME: "/directus/database/data.db"
+          WEBSOCKETS_ENABLED: "true"
+
+  # PostgreSQL Database
+  portfolio-db:
+    image: postgres:14  # Stable PostgreSQL version
+    container_name: portfolio-db
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: directus
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  db_data:

@@ -100,13 +100,13 @@ export default function AppointmentPage() {
                     selected={date}
                     onSelect={setDate}
                     disabled={(date) => {
-                      // Disable weekends and past dates
+                      // Disable weekends (Saturday and Sunday) and past dates
                       const day = date.getDay()
                       const today = new Date()
-                      today.setHours(0, 0, 0, 0)
-                      return date < today || day === 0 || day === 6
+                      today.setHours(0, 0, 0, 0) // Reset time to compare only the date
+                      return date < today || day === 0 || day === 6 // Disable past dates and weekends
                     }}
-                    className="border rounded-md"
+                    className="your-custom-class" // Add any custom classes here
                   />
                 </div>
 

@@ -6,6 +6,7 @@ import Link from "next/link"
 import { Icon } from "@/components/ui/icon"
 import { getCategoryIcon } from "@/lib/icon-utils"
 import Image from "next/image"
+import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, AwaitedReactNode, Key } from "react"
 
 export default function PortfolioPage() {
   // Sample projects data
@@ -129,7 +130,7 @@ export default function PortfolioPage() {
   )
 }
 
-function ProjectCard({ project }) {
+function ProjectCard({ project }:any) {
   const categoryIcon = getCategoryIcon(project.category)
 
   return (
@@ -155,7 +156,7 @@ function ProjectCard({ project }) {
         </div>
         <p className="text-muted-foreground mb-4">{project.description}</p>
         <div className="flex flex-wrap gap-2 mb-4">
-          {project.technologies.map((tech, index) => (
+          {project.technologies.map((tech: string | number | bigint | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<AwaitedReactNode> | null | undefined, index: Key | null | undefined) => (
             <Badge key={index} variant="secondary">
               {tech}
             </Badge>
