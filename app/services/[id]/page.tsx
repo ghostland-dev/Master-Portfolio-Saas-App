@@ -16,7 +16,7 @@ const services = [
     description: "Création d'interfaces utilisateur modernes, réactives et intuitives",
     longDescription:
       "Je crée des interfaces utilisateur modernes et intuitives qui offrent une expérience utilisateur exceptionnelle. Mes solutions front-end sont optimisées pour les performances, l'accessibilité et la compatibilité avec tous les appareils.",
-    image: "/images/services/frontend.jpg",
+    image: "/images/project1.jpeg",
     color: "blue",
     features: [
       "Applications web réactives avec React et Vue.js",
@@ -30,23 +30,23 @@ const services = [
       {
         name: "React",
         description: "Bibliothèque JavaScript pour créer des interfaces utilisateur",
-        icon: "/images/tech/react.svg",
+        icon: "/images/tech/React.svg",
       },
       {
         name: "Vue.js",
         description: "Framework JavaScript progressif pour construire des interfaces utilisateur",
-        icon: "/images/tech/vue.svg",
+        icon: "/images/tech/Vue.js.svg",
       },
       {
         name: "Next.js",
         description: "Framework React pour la production avec rendu côté serveur",
         icon: "/images/tech/nextjs.svg",
-        darkIcon: "/images/tech/nextjs-dark.svg",
+        darkIcon: "/images/tech/Next.js.svg",
       },
       {
         name: "Tailwind CSS",
         description: "Framework CSS utilitaire pour créer des designs personnalisés",
-        icon: "/images/tech/tailwind.svg",
+        icon: "/images/tech/Tailwind CSS.svg",
       },
       {
         name: "TypeScript",
@@ -83,7 +83,7 @@ const services = [
     description: "Conception et développement d'APIs robustes et évolutives",
     longDescription:
       "Je développe des solutions back-end robustes, évolutives et sécurisées qui répondent aux besoins spécifiques de votre entreprise. Mes APIs sont conçues pour être performantes, faciles à maintenir et à faire évoluer.",
-    image: "/images/services/backend.jpg",
+    image: "/images/project2.jpeg",
     color: "green",
     features: [
       "Conception et développement d'APIs RESTful",
@@ -97,26 +97,26 @@ const services = [
       {
         name: "Node.js",
         description: "Environnement d'exécution JavaScript côté serveur",
-        icon: "/images/tech/nodejs.svg",
+        icon: "/images/tech/Node.js.svg",
       },
       {
         name: "Express",
         description: "Framework web minimaliste pour Node.js",
         icon: "/images/tech/express.svg",
-        darkIcon: "/images/tech/express-dark.svg",
+        darkIcon: "/images/tech/Express.svg",
       },
       {
         name: "NestJS",
         description: "Framework Node.js progressif pour construire des applications côté serveur",
-        icon: "/images/tech/nestjs.svg",
+        icon: "/images/tech/NestJS.svg",
       },
-      { name: "GraphQL", description: "Langage de requête pour les APIs", icon: "/images/tech/graphql.svg" },
+      { name: "GraphQL", description: "Langage de requête pour les APIs", icon: "/images/tech/GraphQL.svg" },
       {
         name: "Prisma",
         description: "ORM nouvelle génération pour Node.js et TypeScript",
-        icon: "/images/tech/prisma.svg",
+        icon: "/images/tech/Prisma.svg",
       },
-      { name: "JWT", description: "Standard ouvert pour la création de tokens d'accès", icon: "/images/tech/jwt.svg" },
+      { name: "JWT", description: "Standard ouvert pour la création de tokens d'accès", icon: "/images/tech/JWT.svg" },
     ],
     projects: [
       {
@@ -142,7 +142,7 @@ const services = [
     description: "Automatisation, CI/CD, containerisation et orchestration",
     longDescription:
       "J'implémente des pratiques DevOps modernes pour automatiser et optimiser vos processus de développement et de déploiement. Mes solutions DevOps vous permettent de livrer plus rapidement, plus fréquemment et avec une meilleure qualité.",
-    image: "/images/services/devops.jpg",
+    image: "/images/project3.jpeg",
     color: "purple",
     features: [
       "Mise en place de pipelines CI/CD",
@@ -153,16 +153,16 @@ const services = [
       "Gestion de la configuration et des secrets",
     ],
     tools: [
-      { name: "Docker", description: "Plateforme de containerisation d'applications", icon: "/images/tech/docker.svg" },
-      { name: "Kubernetes", description: "Système d'orchestration de containers", icon: "/images/tech/kubernetes.svg" },
+      { name: "Docker", description: "Plateforme de containerisation d'applications", icon: "/images/tech/Docker.svg" },
+      { name: "Kubernetes", description: "Système d'orchestration de containers", icon: "/images/tech/Kubernetes.svg" },
       {
         name: "GitHub Actions",
         description: "Automatisation des workflows CI/CD",
-        icon: "/images/tech/github-actions.svg",
+        icon: "/images/tech/GitHub.svg",
       },
-      { name: "Terraform", description: "Outil d'infrastructure as code", icon: "/images/tech/terraform.svg" },
-      { name: "AWS", description: "Services cloud d'Amazon", icon: "/images/tech/aws.svg" },
-      { name: "Prometheus", description: "Système de monitoring et d'alerte", icon: "/images/tech/prometheus.svg" },
+      { name: "Terraform", description: "Outil d'infrastructure as code", icon: "/images/tech/Terraform.svg" },
+      { name: "AWS", description: "Services cloud d'Amazon", icon: "/images/tech/AWS.svg" },
+      { name: "Prometheus", description: "Système de monitoring et d'alerte", icon: "/images/tech/Prometheus.svg" },
     ],
     projects: [
       {
@@ -188,7 +188,7 @@ const services = [
     description: "Conception, optimisation et gestion de bases de données",
     longDescription:
       "Je conçois et optimise des bases de données pour garantir la performance, la sécurité et la scalabilité de vos applications. Mes solutions de base de données sont adaptées à vos besoins spécifiques et à votre volume de données.",
-    image: "/images/services/database.jpg",
+    image: "/images/project3.jpeg",
     color: "orange",
     features: [
       "Conception de schémas de base de données",
@@ -202,21 +202,21 @@ const services = [
       {
         name: "PostgreSQL",
         description: "Système de gestion de base de données relationnelle avancé",
-        icon: "/images/tech/postgresql.svg",
+        icon: "/images/tech/PostgreSQL.svg",
       },
-      { name: "MongoDB", description: "Base de données NoSQL orientée documents", icon: "/images/tech/mongodb.svg" },
-      { name: "Redis", description: "Magasin de structure de données en mémoire", icon: "/images/tech/redis.svg" },
+      { name: "MongoDB", description: "Base de données NoSQL orientée documents", icon: "/images/tech/MongoDB.svg" },
+      { name: "Redis", description: "Magasin de structure de données en mémoire", icon: "/images/tech/Redis.svg" },
       {
         name: "MySQL",
         description: "Système de gestion de base de données relationnelle open-source",
-        icon: "/images/tech/mysql.svg",
+        icon: "/images/tech/MYSQL.svg",
       },
       {
         name: "Elasticsearch",
         description: "Moteur de recherche et d'analyse distribué",
-        icon: "/images/tech/elasticsearch.svg",
+        icon: "/images/tech/Elasticsearch.svg",
       },
-      { name: "Supabase", description: "Alternative open source à Firebase", icon: "/images/tech/supabase.svg" },
+      { name: "Supabase", description: "Alternative open source à Firebase", icon: "/images/tech/Supabase.svg" },
     ],
     projects: [
       {

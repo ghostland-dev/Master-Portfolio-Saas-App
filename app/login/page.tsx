@@ -118,13 +118,13 @@ export default function LoginPage() {
         )}
 
         <Tabs defaultValue="login" value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-2">
+          <TabsList className="grid w-full grid-cols-1">
             <TabsTrigger value="login" className="flex items-center gap-1.5">
               <Icon name="LogIn" size="sm" aria-hidden={true} /> Connexion
             </TabsTrigger>
-            <TabsTrigger value="demo" className="flex items-center gap-1.5">
+            {/* <TabsTrigger value="demo" className="flex items-center gap-1.5">
               <Icon name="Users" size="sm" aria-hidden={true} /> Comptes de démo
-            </TabsTrigger>
+            </TabsTrigger> */}
           </TabsList>
 
           <TabsContent value="login">
@@ -187,7 +187,7 @@ export default function LoginPage() {
             </Card>
           </TabsContent>
 
-          <TabsContent value="demo">
+          {/* <TabsContent value="demo">
             <Card>
               <CardHeader>
                 <CardTitle>Comptes de démonstration</CardTitle>
@@ -268,7 +268,7 @@ export default function LoginPage() {
                 </div>
               </CardFooter>
             </Card>
-          </TabsContent>
+          </TabsContent> */}
         </Tabs>
 
         <div className="mt-4 text-center text-sm text-muted-foreground">
