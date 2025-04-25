@@ -25,13 +25,13 @@ services:
       - "8055:8055"
     environment:
       - DIRECTUS_DB_CLIENT=pg
-      - DIRECTUS_DB_HOST=portfolio-db
+      - DIRECTUS_DB_HOST=postgres
       - DIRECTUS_DB_PORT=5432
       - DIRECTUS_DB_DATABASE=directus
       - DIRECTUS_DB_USER=root
       - DIRECTUS_DB_PASSWORD=root
     depends_on:
-      - portfolio-db
+      - postgres
     networks:
       - app-network
   # Directus 
@@ -50,25 +50,28 @@ services:
           DB_CLIENT: "sqlite3"
           DB_FILENAME: "/directus/database/data.db"
           WEBSOCKETS_ENABLED: "true"
+      networks:
+          - app-network
 
   # PostgreSQL Database
-  portfolio-db:
-    image: postgres:14  # Stable PostgreSQL version
-    container_name: portfolio-db
+  postgres:
+    image: postgres:15
+    container_name: portfolio-postgres
+    restart: unless-stopped
     environment:
-      POSTGRES_USER: root
-      POSTGRES_PASSWORD: root
-      POSTGRES_DB: directus
-    volumes:
-      - db_data:/var/lib/postgresql/data
+      POSTGRES_DB: portfolio_db_master
+      POSTGRES_USER: portfolio_db_admin
+      POSTGRES_PASSWORD: SSp9w30QQlb7NpE7pY4IRhibLFOBlG9lhz2BgvTVLPrMUs3rv21q75DLJSf0H+Hy
     ports:
       - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
     networks:
       - app-network
-
 networks:
   app-network:
     driver: bridge
 
 volumes:
   db_data:
+  postgres_data:
